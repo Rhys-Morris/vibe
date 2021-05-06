@@ -21,8 +21,8 @@ html {
 body {
   font-size: 1.6rem;
   background: linear-gradient(145deg, #d38383, #fdeded);
-  max-width: 240rem;
-  min-width: 160rem;
+  max-width: 180rem;
+  min-width: 180rem;
 }
 
 header {
@@ -31,7 +31,7 @@ header {
 
 main {
   display: flex;
-  min-height: 90vh;
+  min-height: 85vh;
   flex-direction: column;
   width: 100%;
 }
@@ -39,6 +39,7 @@ main {
 .genres {
   background: linear-gradient(to right-bottom, rgba(211, 131, 131, 0.9), rgba(253, 237, 237, 0.5));
   min-height: 90vh;
+  padding-bottom: 5rem;
 }
 
 .container {
@@ -116,10 +117,12 @@ main .container {
   margin-top: 5rem;
   text-align: center;
   line-height: 45px;
+  font-weight: 400;
 }
 
 .title h2 {
   font-size: 40px;
+  font-weight: 400;
 }
 
 .title span {
@@ -245,7 +248,7 @@ main .container {
   display: flex;
   flex-direction: column;
   align-content: center;
-  min-height: 90vh;
+  min-height: 86.5vh;
   background-image: linear-gradient(145deg, rgba(211, 131, 131, 0.9), rgba(253, 237, 237, 0.5)), url(./img/mood.jpg);
   background-position: center;
   background-size: cover;
@@ -369,7 +372,7 @@ main .container {
 
 .hero {
   width: 100%;
-  min-height: 90vh;
+  min-height: 86.5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -575,6 +578,17 @@ main .container {
   position: relative;
   font-size: 2rem;
   top: 0.3rem;
+}
+
+.footer {
+  height: 3rem;
+  padding: 0 5rem;
+  min-height: 5vh;
+  background-color: #111;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #eee;
 }
 
 /*# sourceMappingURL=index.css.map */

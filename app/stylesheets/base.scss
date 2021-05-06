@@ -23,8 +23,8 @@ body {
   background: linear-gradient(145deg, #d38383, #fdeded);
 
   // Define body size on desktops
-  max-width: 240rem;
-  min-width: 160rem;
+  max-width: 180rem;
+  min-width: 180rem;
   // background: linear-gradient(250deg, rgb(58,173, 217), rgb(82,196,118));
 }
 
@@ -34,7 +34,7 @@ header {
 
 main {
   display: flex;
-  min-height: 90vh;
+  min-height: 85vh;
   flex-direction: column;
   width: 100%;
 }
