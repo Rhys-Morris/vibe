@@ -1,5 +1,6 @@
-const heroCta = document.querySelector(".hero__cta");
+import { initialise } from "./modules/api.js";
 
-heroCta.addEventListener("click", () => {
-  console.log("clicked");
-});
+const heroCta = document.querySelector(".hero__cta");
+const isAuthed = false;
+
+heroCta.addEventListener("click", initialise);
