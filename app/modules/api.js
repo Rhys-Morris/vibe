@@ -1,4 +1,4 @@
-const REDIRECT_URI = "http://127.0.0.1:5500/app/index.html";
+const REDIRECT_URI = "http://127.0.0.1:5500/app/pages/gauge-page.html";
 const CLIENT_ID = "772dfd3acef348b6a32830f9e86b2a97";
 const CLIENT_SECRET = "d007b61718e244ee8644829972331a74";
 
@@ -51,26 +51,49 @@ function buildBodyParameters(code) {
   fetchAccessToken(body);
 }
 
-function handleRedirect() {
+export function handleRedirect() {
+  console.log("here");
   const code = parseUrl(window.location.href);
   buildBodyParameters(code);
 }
 
 export function initialise() {
-  if (localStorage.getItem("accessToken")) return getReccomendation();
-
-  // We do not yet have an access code
-  if (!window.location.href.match(/code/)) requestAuth();
-
-  // We have beenr edirected from Spotify with an access code
-  handleRedirect();
+  if (localStorage.getItem("accessToken"))
+    window.location.href = "./pages/gauge-page.html";
+  else {
+    requestAuth();
+  }
 }
 
 // Get data with access token
 
-async function getGenres() {
+function buildGenresQueryString(genres) {
+  let queryString = "";
+  genres.forEach((genre, index) => {
+    queryString += index === genres.length - 1 ? genre : `${genre}%2C`;
+  });
+  return queryString;
+}
+
+export async function getRecommendations(trackFeatures, genres) {
+  const { danceability, tempo, valence, energy } = trackFeatures;
+  const genresQuery = buildGenresQueryString(genres);
+
+  // Get min and max values for range requests
+  const minDanceability = (danceability < 0.11 ? 0 : danceability - 0).toFixed(
+    2
+  );
+  const maxDanceability = (danceability > 0.89
+    ? 1
+    : danceability + 0.1
+  ).toFixed(2);
+  const minValence = (valence < 0.11 ? 0 : valence - 0.1).toFixed(2);
+  const maxValence = (valence > 0.89 ? 1 : valence + 0.1).toFixed(2);
+  const minEnergy = (energy < 0.11 ? 0 : energy - 0.1).toFixed(2);
+  const maxEnergy = (energy > 0.89 ? 1 : energy + 0.1).toFixed(2);
+
   const response = await fetch(
-    "https://api.spotify.com/v1/recommendations/available-genre-seeds",
+    `https://api.spotify.com/v1/recommendations?limit=100&seed_genres=${genresQuery}&min_danceability=${minDanceability}&max_danceability=${maxDanceability}&min_valence=${minValence}&max_valence=${maxValence}&min_energy=${minEnergy}&max_energy=${maxEnergy}`,
     {
       method: "GET",
       headers: {
@@ -82,18 +105,4 @@ async function getGenres() {
   console.log(data);
 }
 
-async function getReccomendation() {
-  const response = await fetch(
-    "https://api.spotify.com/v1/recommendations?limit=100&seed_genres=indie",
-    {
-      method: "GET",
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("accessToken"),
-      },
-    }
-  );
-  const data = await response.json();
-  const img = document.createElement("img");
-  img.src = data.tracks[0].album.images[0].url;
-  document.body.appendChild(img);
-}
+// https://api.spotify.com/v1/recommendations?limit=150&seed_genres=rock&min_danceability=${minDanceability}&max_danceability=${maxDanceability}&min_valence=${minValence}&max_valence=${maxValence}&min_energy=${minEnergy}&max_energy=${maxEnergy}
