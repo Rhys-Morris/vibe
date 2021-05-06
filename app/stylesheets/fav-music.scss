@@ -1,12 +1,13 @@
-body {
-  background-color: #171618;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #fff;
+.genres {
+  background: linear-gradient(to right-bottom, rgba(211, 131, 131, .9), rgba(253, 237, 237, .5));
+  min-height: 90vh;
 }
+
+
 .container {
   width: 90%;
   margin: auto;
+  color: #111;
 }
 #shuffle-button {
   padding-left: 20px;
@@ -64,15 +65,13 @@ body {
 }
 
 //** main section **//
-main {
-  width: 100%;
-  margin-bottom: 20px;
-}
+
 main .container {
   margin-top: 30px;
   margin-bottom: 50px;
 }
 .container .title {
+  margin-top: 5rem;
   text-align: center;
   line-height: 45px;
 }
@@ -88,7 +87,7 @@ main .container {
   border: 1px solid #707070;
   background-color: #070707;
   cursor: pointer;
-  padding: 10px;
+  padding: 15px;
 }
 .content {
   display: flex;
@@ -102,7 +101,7 @@ main .container {
   background-blend-mode: lighten;
   // opacity: 0.3;
   background: linear-gradient(to left, #f23637, #fc1068);
-  background: rgba(242, 54, 55, 0.5);
+  background: #070707;
   transition: 0.2s all;
 }
 .content .circle {
@@ -126,7 +125,8 @@ main .container {
   top: 60%;
   left: 3%;
   font-size: 30px;
-  color: #eef539;
+  color: #eee;
+  // color: #eef539;
 }
 
 // Genre colors //
@@ -186,13 +186,3 @@ main .container {
   transition: 0.2s all;
 }
 
-/** Next button **/
-.next {
-  position: relative;
-  left: 90%;
-  // top: 60%;
-  bottom: 20%;
-  color: #fff;
-  font-size: 20px;
-  margin-bottom: 30px;
-}
