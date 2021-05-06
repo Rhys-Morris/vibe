@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(to right, #d6a4a4, #f4f4f4);
+  background: linear-gradient(to right, #d39494, #fdeded);
   width: 100%;
   min-height: 80vh;
   display: flex;
@@ -23,18 +23,19 @@
     text-transform: uppercase;
     font-size: 7.5rem;
     font-weight: 500;
-    letter-spacing: 1.2px;
     padding-bottom: 2rem;
-    border-bottom: 2px solid #444;
+    border-bottom: 2px solid #fc0b68;
   }
 
   &__subtitle {
     margin-top: 2rem;
     font-weight: 400;
+    font-size: 3rem;
   }
 
   &__cta {
     margin-top: 3rem;
     cursor: pointer;
+    font-size: 2rem;
   }
 }

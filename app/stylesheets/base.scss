@@ -14,10 +14,12 @@ html {
 
 body {
   font-size: 1.6rem;
+  background: linear-gradient(to right, #d39494, #fdeded);
+  // background: linear-gradient(250deg, rgb(58,173, 217), rgb(82,196,118));
 }
 
 main {
   display: flex;
-  min-height: 90vh;
+  min-height: 80vh;
   flex-direction: column;
 }
