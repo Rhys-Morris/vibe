@@ -49,11 +49,12 @@
     border-radius: 1rem;
     font-size: 1.6rem;
     color: #eee;
-    border-top: 2px solid #f23637;
-    border-left: 2px solid #f23637;
-    border-bottom: 2px solid #fc0b68;
-    border-right: 2px solid #fc0b68;
+    border-top: 2px solid #eee;
+    border-left: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    border-right: 2px solid #eee;
     margin: 3rem;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
 
     &__album-image {
       width: 100%;
