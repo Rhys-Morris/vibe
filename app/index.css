@@ -23,6 +23,7 @@ body {
   background: linear-gradient(145deg, #d38383, #fdeded);
   max-width: 180rem;
   min-width: 180rem;
+  min-height: 100vh;
 }
 
 header {
@@ -254,6 +255,7 @@ main .container {
   background-size: cover;
   color: #eee;
   width: 100%;
+  padding-bottom: 3rem;
 }
 .section--gauge h1 {
   margin-top: 8rem;
@@ -423,8 +425,7 @@ main .container {
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 6rem;
-  min-height: 10rem;
+  padding: 2rem 6rem;
   background-color: #111;
   color: #eee;
 }
@@ -582,9 +583,7 @@ main .container {
 }
 
 .footer {
-  height: 3rem;
-  padding: 0 5rem;
-  min-height: 5vh;
+  padding: 2rem 5rem;
   background-color: #111;
   display: flex;
   justify-content: flex-end;

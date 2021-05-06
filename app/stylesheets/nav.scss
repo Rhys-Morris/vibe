@@ -3,8 +3,7 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 6rem;
-  min-height: 10rem;
+  padding: 2rem 6rem;
   background-color: #111;
   color: #eee;
 
@@ -35,7 +34,7 @@
     color: inherit;
     border-bottom: 2px solid transparent;
     padding-bottom: 1rem;
-    transition: .3s all;
+    transition: 0.3s all;
 
     &:hover:not(:last-child) {
       border-bottom: 2px solid #fc0b68;
