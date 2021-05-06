@@ -15,6 +15,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  background: linear-gradient(to right, #d39494, #fdeded);
 }
 
 main {
@@ -23,21 +24,11 @@ main {
   flex-direction: column;
 }
 
-body {
-  background: linear-gradient(to right, #d39494, #fdeded);
-  font-family: "Open Sans", sans-serif;
-}
-body h1 {
-  font-size: 4rem;
-}
-body h2 {
-  font-size: 3rem;
-}
-
 .section--gauge {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(to right, #d39494, #fdeded);
 }
 .section--gauge h1 {
   text-align: center;
@@ -46,6 +37,7 @@ body h2 {
 
 .page-header {
   font-weight: 300;
+  font-size: 4rem;
 }
 
 .gauges {
@@ -61,6 +53,8 @@ body h2 {
   background: linear-gradient(to right, #f23637, #fc0b68);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .gauge-container {
@@ -241,16 +235,6 @@ body h2 {
   text-align: center;
   pointer: cursor;
   background: linear-gradient(to right, #f23637, #fc0b68);
-}
-
-body {
-  background: linear-gradient(250deg, #3aadd9, #52c476);
-  background-repeat: no-repeat;
-  background-position: cover;
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
 }
 
 .main {

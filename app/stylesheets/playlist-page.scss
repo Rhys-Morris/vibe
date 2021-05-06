@@ -1,16 +1,6 @@
-body {
-  background: linear-gradient(250deg, rgb(58,173, 217), rgb(82,196,118));
-  background-repeat: no-repeat;
-  background-position: cover;
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
 .main {
   padding: 50px;
-  h1{
+  h1 {
     font-size: 5rem;
     color: white;
     border-bottom: 2px solid rgba(66, 66, 66, 0.2);
@@ -22,17 +12,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    iframe{
+
+    iframe {
       border-radius: 15px;
     }
   }
 }
 
-footer{
+footer {
   padding-right: 20px;
 }
-.links{
+.links {
   margin-top: 10px;
   text-align: right;
   .border-right {

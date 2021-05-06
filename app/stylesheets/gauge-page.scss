@@ -1,20 +1,8 @@
-// @import "base"
-
-body {
-  background: linear-gradient(to right, #d39494, #fdeded);
-  font-family: "Open Sans", sans-serif;
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-}
-
 .section--gauge {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(to right, #d39494, #fdeded);
   h1 {
     text-align: center;
     padding-bottom: 15px;
@@ -23,6 +11,7 @@ body {
 
 .page-header {
   font-weight: 300;
+  font-size: 4rem;
 }
 
 .gauges {
@@ -37,6 +26,8 @@ body {
     background: linear-gradient(to right, #f23637, #fc0b68);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-weight: 400;
   }
 }
 
