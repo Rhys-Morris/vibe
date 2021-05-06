@@ -1,43 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=s1.0">
-  <link rel="stylesheet" href="../index.css">
-  <title>How are you feeling today?</title>
-</head>
-<body>
-  <div class="container">
-    <h1 class="page-header">How are you feeling today?</h1>
-    <div class="gauges">
-      <div class="gauge-container">
-        <h2>Energy</h2>
-        <div class="gauge-energy">
-          <div class="gauge1">
-            <div class="gauge-body">
-              <div class="gauge-fill1">
-              </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=s1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <title>How are you feeling today?</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__logo">Vibe</div>
+        <ul class="nav__nav-list">
+          <li class="nav__nav-item">
+            <a href="" class="nav__link">About</a>
+            <a href="" class="nav__link">Developers</a>
+            <a href="" class="nav__link cta">Get a Playlist</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="section--gauge">
+        <h1 class="page-header">How are you feeling today?</h1>
+        <div class="gauges">
+          <div class="gauge-container">
+            <h2>Energy</h2>
+            <div id="wrapper">
+              <svg id="meter">
+                <circle
+                  id="outline_curves"
+                  class="circle outline"
+                  cx="50%"
+                  cy="50%"
+                ></circle>
+
+                <circle
+                  id="low"
+                  class="circle range"
+                  cx="50%"
+                  cy="50%"
+                  stroke="rgba(236, 76, 27, 0.8)"
+                ></circle>
+
+                <circle
+                  id="avg"
+                  class="circle range"
+                  cx="50%"
+                  cy="50%"
+                  stroke="#f23637"
+                ></circle>
+
+                <circle
+                  id="high"
+                  class="circle range"
+                  cx="50%"
+                  cy="50%"
+                  stroke="#fc0b68"
+                ></circle>
+
+                <circle id="mask" class="circle" cx="50%" cy="50%"></circle>
+
+                <circle
+                  id="outline_ends"
+                  class="circle outline"
+                  cx="50%"
+                  cy="50%"
+                ></circle>
+              </svg>
+              <input id="slider" type="range" min="0" max="100" value="0" />
+              <label id="lbl" id="value" for="">0</label>
+            </div>
+          </div>
+          <div class="gauge-container">
+            <h2>Mood</h2>
+            <div id="wrapper--2">
+              <svg id="meter--2">
+                <circle
+                  id="outline_curves--2"
+                  class="circle outline"
+                  cx="50%"
+                  cy="50%"
+                ></circle>
+
+                <circle
+                  id="low--2"
+                  class="circle range"
+                  cx="50%"
+                  cy="50%"
+                  stroke="rgba(236, 76, 27, 0.8)"
+                ></circle>
+
+                <circle
+                  id="avg--2"
+                  class="circle range"
+                  cx="50%"
+                  cy="50%"
+                  stroke="#f23637"
+                ></circle>
+
+                <circle
+                  id="high--2"
+                  class="circle range"
+                  cx="50%"
+                  cy="50%"
+                  stroke="#fc0b68"
+                ></circle>
+
+                <circle id="mask--2" class="circle" cx="50%" cy="50%"></circle>
+
+                <circle
+                  id="outline_ends--2"
+                  class="circle outline"
+                  cx="50%"
+                  cy="50%"
+                ></circle>
+              </svg>
+              <input id="slider--2" type="range" min="0" max="100" value="0" />
+              <label id="lbl--2" id="value" for="">0</label>
             </div>
           </div>
         </div>
-      </div>
-      <div class="gauge-container">
-        <h2>Mood</h2>
-        <div class="gauge-mood">
-          <div class="gauge2">
-            <div class="gauge-body">
-              <div class="gauge-fill2">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="#">Next</a>
-  </div>
-  <script src="../modules/gauge-page.js"></script>
-  <script src="../modules/gauge.js" type="module"></script>
-  <script src="../modules/trackLogic.js" type="module"></script>
-</body>
+
+        <a class="gauge__next cta" href="#">Next</a>
+      </section>
+    </main>
+    <script src="../modules/svg.js"></script>
+    <script src="../modules/gauge.js" type="module"></script>
+    <script src="../modules/trackLogic.js" type="module"></script>
+  </body>
 </html>
