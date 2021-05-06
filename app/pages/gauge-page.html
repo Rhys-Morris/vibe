@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How are you feeling today?</title>
-  </head>
-  <body>
-    <h1>Made it!</h1>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=s1.0">
+  <link rel="stylesheet" href="../index.css">
+  <title>How are you feeling today?</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-header">How are you feeling today?</h1>
+    <div class="gauges">
+      <div class="gauge-container">
+        <h2>Energy</h2>
+        <div class="gauge-energy">
+          <div class="gauge1">
+            <div class="gauge-body">
+              <div class="gauge-fill1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gauge-container">
+        <h2>Mood</h2>
+        <div class="gauge-mood">
+          <div class="gauge2">
+            <div class="gauge-body">
+              <div class="gauge-fill2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#">Next</a>
+  </div>
+  <script src="../modules/gauge-page.js"></script>
   <script src="../modules/gauge.js" type="module"></script>
   <script src="../modules/trackLogic.js" type="module"></script>
+</body>
 </html>
