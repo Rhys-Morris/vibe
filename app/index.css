@@ -58,7 +58,7 @@ body a {
   margin-bottom: 20px;
 }
 
-.gauge {
+.gauge1, .gauge2 {
   width: 100%;
   max-width: 500px;
 }
@@ -74,7 +74,7 @@ body a {
   overflow: hidden;
 }
 
-.gauge-fill {
+.gauge-fill1, .gauge-fill2 {
   position: absolute;
   top: 100%;
   left: 0;
@@ -82,7 +82,7 @@ body a {
   height: 150%;
   background-image: linear-gradient(to left, #F7FF00, #DB36A4);
   transform-origin: top center;
-  transform: rotate(90deg);
+  transform: rotate(0turn);
   transition: transform 0.2s ease-out;
 }
 
