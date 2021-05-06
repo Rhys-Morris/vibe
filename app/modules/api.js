@@ -1,4 +1,4 @@
-const REDIRECT_URI = "http://127.0.0.1:5500/app/index.html";
+const REDIRECT_URI = "http://127.0.0.1:5500/app/pages/gauge-page.html";
 const CLIENT_ID = "772dfd3acef348b6a32830f9e86b2a97";
 const CLIENT_SECRET = "d007b61718e244ee8644829972331a74";
 
@@ -51,19 +51,18 @@ function buildBodyParameters(code) {
   fetchAccessToken(body);
 }
 
-function handleRedirect() {
+export function handleRedirect() {
+  console.log("here");
   const code = parseUrl(window.location.href);
   buildBodyParameters(code);
 }
 
 export function initialise() {
-  if (localStorage.getItem("accessToken")) return getReccomendation();
-
-  // We do not yet have an access code
-  if (!window.location.href.match(/code/)) requestAuth();
-
-  // We have beenr edirected from Spotify with an access code
-  handleRedirect();
+  if (localStorage.getItem("accessToken"))
+    window.location.href = "./pages/gauge-page.html";
+  else {
+    requestAuth();
+  }
 }
 
 // Get data with access token
