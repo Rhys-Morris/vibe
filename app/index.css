@@ -24,6 +24,225 @@ main {
 }
 
 body {
+  background-color: #171618;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+#shuffle-button {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 18px;
+  border-radius: 6px;
+  height: 38px;
+  width: 120px;
+  border: none;
+  background: linear-gradient(to left, #f23637, #fc1068);
+  color: #fff;
+  cursor: pointer;
+}
+
+#main-nav {
+  background-color: #070707;
+  color: #fff;
+}
+
+#main-nav .container {
+  width: 90%;
+  margin: auto;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.music__hero {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f23637;
+}
+
+.right .divider {
+  color: #f4f4f4;
+  margin-right: 15px;
+  margin-left: 5px;
+}
+
+.right {
+  display: flex;
+}
+
+.right li {
+  list-style: none;
+  color: #fff;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 9px;
+}
+
+.right li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+main {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+main .container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.container .title {
+  text-align: center;
+  line-height: 45px;
+}
+
+.title h2 {
+  font-size: 40px;
+}
+
+.title span {
+  font-size: 25px;
+}
+
+.content .square {
+  margin-top: 30px;
+  border: 1px solid #707070;
+  background-color: #070707;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.content .square:hover {
+  background-blend-mode: lighten;
+  background: linear-gradient(to left, #f23637, #fc1068);
+  background: rgba(242, 54, 55, 0.5);
+  transition: 0.2s all;
+}
+.content .square:hover .circle {
+  background: linear-gradient(to left, #f23637, #fc1068);
+  transition: 0.2s all;
+}
+
+.content .circle {
+  height: 188px;
+  width: 196px;
+  border-radius: 150px;
+  cursor: pointer;
+}
+
+.inner-cirlce {
+  height: 30px;
+  width: 30px;
+  background-color: #070707;
+  border-radius: 20px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.genre-name {
+  position: relative;
+  top: 60%;
+  left: 3%;
+  font-size: 30px;
+  color: #eef539;
+}
+
+.metal .circle {
+  background: linear-gradient(to left, #928dab, #1f1c2c);
+}
+
+.rap .circle {
+  background: linear-gradient(to left, #c31432, #240b36);
+}
+
+.alternative .circle {
+  background: linear-gradient(to left, #52c234, #ed4264);
+}
+
+.pop .circle {
+  background: linear-gradient(to left, #f7ff00, #db36a4);
+}
+
+.rock .circle {
+  background: linear-gradient(to left, #333333, #dd1818);
+}
+
+.techno .circle {
+  background: linear-gradient(to left, #2ebf91, #8360c3);
+}
+
+.country .circle {
+  background: linear-gradient(to left, #9a8478, #1e130c);
+}
+
+.jazz .circle {
+  background: linear-gradient(to left, #dc2424, #4a569d);
+}
+
+.indie .circle {
+  background: linear-gradient(to left, #cc95c0, #dbd4b4, #7aa1d2);
+}
+
+.hip-hop .circle {
+  background: linear-gradient(to left, #833ab4, #fd1d1d, #fcb045);
+}
+
+.reggae .circle {
+  background: linear-gradient(to left, #fff200, #1e9600, #ff0000);
+}
+
+.acoustic .circle {
+  background: linear-gradient(to left, #f2994a, #f2c94c);
+}
+
+/** green tick styling **/
+.box-wrap .fa-check-circle {
+  opacity: 0;
+}
+
+.fa-check-circle {
+  position: relative;
+  top: 20%;
+  left: 90%;
+  margin: 0;
+  padding: 0;
+  color: #1e9600;
+  color: #f2c94c;
+  color: #fff;
+  transition: 0.2s all;
+}
+
+/** Next button **/
+.next {
+  position: relative;
+  left: 90%;
+  bottom: 20%;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+body {
   background-image: linear-gradient(to right, #fff5dd, white);
   font-family: "Open Sans", sans-serif;
 }
