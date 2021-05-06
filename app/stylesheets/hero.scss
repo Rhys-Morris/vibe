@@ -1,0 +1,41 @@
+.hero {
+  background: linear-gradient(to right, #d39494, #fdeded);
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  &__logo {
+    background: linear-gradient(to right, #f23637, #fc0b68);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-size: 7.5rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #fc0b68;
+  }
+
+  &__subtitle {
+    margin-top: 2rem;
+    font-weight: 400;
+    font-size: 3rem;
+  }
+
+  &__cta {
+    margin-top: 3rem;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}

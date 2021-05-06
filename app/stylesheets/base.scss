@@ -8,4 +8,18 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  font-size: 1.6rem;
+  background: linear-gradient(to right, #d39494, #fdeded);
+  // background: linear-gradient(250deg, rgb(58,173, 217), rgb(82,196,118));
+}
+
+main {
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
 }
