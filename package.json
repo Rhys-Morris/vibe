@@ -1,0 +1,22 @@
+{
+  "name": "vibe",
+  "version": "1.0.0",
+  "description": "Application for Spotify user's to generate playlists based on mood",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass ./app/stylesheets/main.scss ./app/index.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rhys-Morris/vibe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rhys-Morris/vibe/issues"
+  },
+  "homepage": "https://github.com/Rhys-Morris/vibe#readme",
+  "devDependencies": {
+    "sass": "^1.32.12"
+  }
+}
