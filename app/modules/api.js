@@ -2,7 +2,7 @@ const REDIRECT_URI = "http://127.0.0.1:5500/app/pages/gauge-page.html";
 const CLIENT_ID = "772dfd3acef348b6a32830f9e86b2a97";
 const CLIENT_SECRET = "d007b61718e244ee8644829972331a74";
 
-function requestAuth() {
+export function requestAuth() {
   const AUTHORIZE_URL = "https://accounts.spotify.com/authorize";
 
   let url = AUTHORIZE_URL;
@@ -13,8 +13,8 @@ function requestAuth() {
   window.location.href = url;
 }
 
-function parseUrl(url) {
-  return url.split("code=")[1];
+export function parseUrl(url, split) {
+  return url.split(split)[1];
 }
 
 async function fetchAccessToken(params) {
@@ -36,6 +36,7 @@ async function fetchAccessToken(params) {
     // Set refresh and access tokens to local storage
     localStorage.setItem("accessToken", accessToken);
     localStorage.setItem("refreshToken", refreshToken);
+    localStorage.setItem("fetchedTime", Date.now());
   } catch (err) {
     console.error(err);
   }
@@ -52,8 +53,7 @@ function buildBodyParameters(code) {
 }
 
 export function handleRedirect() {
-  console.log("here");
-  const code = parseUrl(window.location.href);
+  const code = parseUrl(window.location.href, "code=");
   buildBodyParameters(code);
 }
 
