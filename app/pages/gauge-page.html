@@ -20,7 +20,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="gauge-main">
       <section class="section--gauge">
         <h1 class="page-header">How are you feeling today?</h1>
         <div class="gauges">
@@ -122,9 +122,12 @@
           </div>
         </div>
 
-        <a class="gauge__next cta" href="#">Next</a>
+        <a id="gauge-btn" class="gauge__next cta" href="#">Next</a>
+
       </section>
     </main>
+    <script src="../index.js"></script>
+    <script src="../modules/fav-music.js" type="module"></script>
     <script src="../modules/svg.js"></script>
     <script src="../modules/gauge.js" type="module"></script>
     <script src="../modules/trackLogic.js" type="module"></script>

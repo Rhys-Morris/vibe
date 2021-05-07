@@ -1,5 +1,6 @@
 const gaugeElement = document.querySelector(".gauge");
 
+
 function setGaugeValue (gauge, value) {
   if (value < 0 || value > 360) return;
   gauge.style.transform = `rotate(${value}deg)`;
@@ -28,3 +29,4 @@ function fillGauge(e){
     setGaugeValue(box, angle)
   }
 }
+
