@@ -1,5 +1,6 @@
 import { handleRedirect, requestAuth, parseUrl } from "./api.js";
 import { renderError, clearHtml } from "./render.js";
+import { addGenreListeners, addGenreSubmitListener } from "./fav-music.js";
 
 let errorRendered = false;
 
@@ -16,43 +17,9 @@ if (!localStorage.getItem("accessToken")) {
   // We have been redirected from Spotify with an access code
   window.onload = handleRedirect();
 }
-import { userSelect } from "./fav-music.js";
-
-const energyLevel = document.getElementById('lbl')
-const moodLevel = document.getElementById('lbl--2')
-let energy;
-let mood;
-
-
-const guageBtn = document.getElementById('gauge-btn')
-    .addEventListener('click', () => {
-        renderMusicPage()
-        userSelect()
-        selectedMusic()
-        energyGauge()
-        moodGauge()
-
-    })
-
-
-function renderMusicPage(){
-    const gaugeMainPage = document.getElementById('gauge-main')
-    document.write(localStorage['content']);
-}
-
-
-function energyGauge() {
-    energy = parseInt(energyLevel.innerText)
-    console.log("Current energy level:", energy)
-}
-
-function moodGauge() {
-    mood = parseInt(moodLevel.innerText)
-    console.log("Current mood level:", mood)
-}
-
 // We have an expired access code and need to dump out local storage and refresh
 // Wait two seconds before checking to allow new fetch
+
 setTimeout(() => {
   if (
     !errorRendered &&
@@ -63,3 +30,33 @@ setTimeout(() => {
   }
 }, 2000);
 ``;
+
+const energyLevel = document.getElementById("lbl");
+const moodLevel = document.getElementById("lbl--2");
+let energy;
+let mood;
+
+// Listen for click on next - get the mood, energy and render new page
+const gaugeBtn = document.getElementById("gauge-btn");
+gaugeBtn.addEventListener("click", () => {
+  energyGauge();
+  moodGauge();
+  renderMusicPage();
+  addGenreListeners();
+  addGenreSubmitListener();
+});
+
+function renderMusicPage() {
+  const gaugeMainPage = document.getElementById("gauge-main");
+  document.write(localStorage["content"]);
+}
+
+function energyGauge() {
+  energy = parseInt(energyLevel.innerText) / 100;
+  localStorage.setItem("energy", energy);
+}
+
+function moodGauge() {
+  mood = parseInt(moodLevel.innerText) / 100;
+  localStorage.setItem("mood", mood);
+}

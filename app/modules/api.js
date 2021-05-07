@@ -102,7 +102,7 @@ export async function getRecommendations(trackFeatures, genres) {
     }
   );
   const data = await response.json();
-  console.log(data);
+  return data;
 }
 
 // https://api.spotify.com/v1/recommendations?limit=150&seed_genres=rock&min_danceability=${minDanceability}&max_danceability=${maxDanceability}&min_valence=${minValence}&max_valence=${maxValence}&min_energy=${minEnergy}&max_energy=${maxEnergy}

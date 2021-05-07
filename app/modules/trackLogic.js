@@ -1,7 +1,9 @@
 import { getRecommendations } from "./api.js";
 
-function getTrackFeatures(happy, energyLevel) {
+export function getTrackFeatures(happy, energyLevel) {
   // Map happy and energy values to track features for API call
+  happy = Number(happy);
+  energyLevel = Number(energyLevel);
   const [danceability, valence] = [getVariation(happy), getVariation(happy)];
   const [tempo, energy] = [
     getVariation(energyLevel),
@@ -30,15 +32,3 @@ function getVariation(number) {
 
   return randomInRange / 100;
 }
-
-const trackFeatures = getTrackFeatures(0.3, 0.6);
-const trackFeatures2 = getTrackFeatures(0.2, 0.8);
-const trackFeatures3 = getTrackFeatures(0.5, 0.5);
-const trackFeatures4 = getTrackFeatures(0.8, 0.9);
-const trackFeatures5 = getTrackFeatures(0.4, 0.6);
-
-getRecommendations(trackFeatures, ["rock", "indie", "jazz"]);
-getRecommendations(trackFeatures2, ["rock", "indie", "jazz"]);
-getRecommendations(trackFeatures3, ["rock", "indie", "jazz"]);
-getRecommendations(trackFeatures4, ["rock", "indie", "jazz"]);
-getRecommendations(trackFeatures5, ["rock", "indie", "jazz"]);

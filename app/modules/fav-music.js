@@ -1,13 +1,15 @@
-export function userSelect(){
-    const genres = document.querySelectorAll('.box-wrap')
-    genres.forEach((genre) => {
-        genre.addEventListener('click', () => {
-            genre.classList.toggle('box-wrap')
-            console.log(genre)
-            console.log(genre.dataset.genre)
-        })
-    })
-} 
+import { getTrackFeatures } from "./trackLogic.js";
+import { getRecommendations } from "./api.js";
+
+export function addGenreListeners() {
+  const genres = document.querySelectorAll(".box-wrap");
+  genres.forEach((genre) => {
+    genre.addEventListener("click", () => {
+      genre.classList.toggle("box-wrap");
+      genre.classList.add("selected");
+    });
+  });
+}
 
 const favMusicPage = `<!DOCTYPE html>
 <html lang="en">
@@ -48,7 +50,7 @@ const favMusicPage = `<!DOCTYPE html>
 
         <!-- /** First Row **/ -->
         <div class="content first-row">
-          <div class="box-wrap" data-genre="Metal">
+          <div class="box-wrap" data-genre="metal">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square metal">
               <div class="circle">
@@ -58,7 +60,7 @@ const favMusicPage = `<!DOCTYPE html>
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="Rap">
+          <div class="box-wrap" data-genre="rap">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square rap">
               <div class="circle">
@@ -68,7 +70,7 @@ const favMusicPage = `<!DOCTYPE html>
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="Alternative">
+          <div class="box-wrap" data-genre="alternative">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square alternative">
               <div class="circle">
@@ -78,7 +80,7 @@ const favMusicPage = `<!DOCTYPE html>
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="Pop">
+          <div class="box-wrap" data-genre="pop">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square pop">
               <div class="circle">
@@ -91,7 +93,7 @@ const favMusicPage = `<!DOCTYPE html>
 
         <!-- /** second Row **/ -->
         <div class="content second-row">
-          <div class="box-wrap" data-genre="Rock">
+          <div class="box-wrap" data-genre="rock">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square rock">
               <div class="circle">
@@ -101,7 +103,7 @@ const favMusicPage = `<!DOCTYPE html>
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="Techno">
+          <div class="box-wrap" data-genre="techno">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square techno">
               <div class="circle">
@@ -111,7 +113,7 @@ const favMusicPage = `<!DOCTYPE html>
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="Country">
+          <div class="box-wrap" data-genre="country">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square country">
               <div class="circle">
@@ -121,7 +123,7 @@ const favMusicPage = `<!DOCTYPE html>
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="Jazz">
+          <div class="box-wrap" data-genre="jazz">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square jazz">
               <div class="circle">
@@ -134,7 +136,7 @@ const favMusicPage = `<!DOCTYPE html>
 
         <!-- /** Third Row **/ -->
         <div class="content third-row">
-          <div class="box-wrap" data-genre="Indie">
+          <div class="box-wrap" data-genre="indie">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square indie">
               <div class="circle">
@@ -144,7 +146,7 @@ const favMusicPage = `<!DOCTYPE html>
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="Hip-Hop">
+          <div class="box-wrap" data-genre="hip-hop">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square hip-hop">
               <div class="circle">
@@ -154,7 +156,7 @@ const favMusicPage = `<!DOCTYPE html>
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="Reggae">
+          <div class="box-wrap" data-genre="reggae">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square reggae">
               <div class="circle">
@@ -164,7 +166,7 @@ const favMusicPage = `<!DOCTYPE html>
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="Acoustic">
+          <div class="box-wrap" data-genre="acoustic">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square acoustic">
               <div class="circle">
@@ -176,7 +178,7 @@ const favMusicPage = `<!DOCTYPE html>
         </div>
       </div>
 
-      <a class="next" href="">Next></a>
+      <button class="next" id="genre-submit">Next></button>
     </main>
 
     <script src="../app/index.js"></script>
@@ -184,6 +186,34 @@ const favMusicPage = `<!DOCTYPE html>
   </body>
 </html>
 
-`
+`;
 localStorage.setItem("content", favMusicPage);
 // window.localStorage.clear();
+
+function getGenres() {
+  const selectedGenres = Array.from(document.querySelectorAll(".selected"));
+  const mappedGenres = selectedGenres.map((element) => {
+    return element.dataset.genre;
+  });
+  console.log(mappedGenres);
+  return mappedGenres;
+}
+
+export function addGenreSubmitListener() {
+  document
+    .getElementById("genre-submit")
+    .addEventListener("click", async () => {
+      const genres = getGenres();
+      const trackFeatures = getTrackFeatures(
+        localStorage.getItem("mood"),
+        localStorage.getItem("energy")
+      );
+
+      // Make recommendations request
+      const recommendations = await getRecommendations(trackFeatures, genres);
+      console.log(recommendations);
+
+      // Render loading animation
+      // Once returns - clear page and render playlist markup and render cards
+    });
+}
