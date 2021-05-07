@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+export function userSelect(){
+    const genres = document.querySelectorAll('.box-wrap')
+    genres.forEach((genre) => {
+        genre.addEventListener('click', () => {
+            genre.classList.toggle('box-wrap')
+            console.log(genre)
+            console.log(genre.dataset.genre)
+        })
+    })
+} 
+
+const favMusicPage = `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,17 +39,16 @@
         </ul>
       </nav>
     </header>
-    <main class="genres">
+    <main>
       <div class="container">
         <div class="title">
-          <h2>What music are you in the mood for?</h2>
-          <span>Please select at least 3 genres:</span>
+          <h2>What's your favourite music?</h2>
+          <span>Select at least 3 genres</span>
         </div>
 
         <!-- /** First Row **/ -->
         <div class="content first-row">
-
-          <div class="box-wrap genre" data-genre="Metal">
+          <div class="box-wrap" data-genre="Metal">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square metal">
               <div class="circle">
@@ -48,7 +58,7 @@
             </div>
           </div>
 
-          <div class="genre box-wrap" data-genre="Rap">
+          <div class="box-wrap" data-genre="Rap">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square rap">
               <div class="circle">
@@ -58,7 +68,7 @@
             </div>
           </div>
 
-          <div class="genre box-wrap">
+          <div class="box-wrap" data-genre="Alternative">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square alternative">
               <div class="circle">
@@ -68,7 +78,7 @@
             </div>
           </div>
 
-          <div class="box-wrap">
+          <div class="box-wrap" data-genre="Pop">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square pop">
               <div class="circle">
@@ -81,7 +91,7 @@
 
         <!-- /** second Row **/ -->
         <div class="content second-row">
-          <div class="box-wrap">
+          <div class="box-wrap" data-genre="Rock">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square rock">
               <div class="circle">
@@ -91,7 +101,7 @@
             </div>
           </div>
 
-          <div class="box-wrap">
+          <div class="box-wrap" data-genre="Techno">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square techno">
               <div class="circle">
@@ -101,7 +111,7 @@
             </div>
           </div>
 
-          <div class="box-wrap">
+          <div class="box-wrap" data-genre="Country">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square country">
               <div class="circle">
@@ -111,7 +121,7 @@
             </div>
           </div>
 
-          <div class="box-wrap">
+          <div class="box-wrap" data-genre="Jazz">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square jazz">
               <div class="circle">
@@ -124,7 +134,7 @@
 
         <!-- /** Third Row **/ -->
         <div class="content third-row">
-          <div class="box-wrap">
+          <div class="box-wrap" data-genre="Indie">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square indie">
               <div class="circle">
@@ -134,7 +144,7 @@
             </div>
           </div>
 
-          <div class="box-wrap">
+          <div class="box-wrap" data-genre="Hip-Hop">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square hip-hop">
               <div class="circle">
@@ -144,7 +154,7 @@
             </div>
           </div>
 
-          <div class="box-wrap">
+          <div class="box-wrap" data-genre="Reggae">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square reggae">
               <div class="circle">
@@ -154,7 +164,7 @@
             </div>
           </div>
 
-          <div class="box-wrap">
+          <div class="box-wrap" data-genre="Acoustic">
             <i class="fas fa-check-circle fa-4x"></i>
             <div class="square acoustic">
               <div class="circle">
@@ -166,11 +176,14 @@
         </div>
       </div>
 
-      <a class="next next--genres" href="./playlist-page.html">Next></a>
+      <a class="next" href="">Next></a>
     </main>
-    <footer class="footer">
-      <p class="footer__copy">&copy; Vibe 2021</p>
-    </footer>
-    <script src="../index.js"></script>
+
+    <script src="../app/index.js"></script>
+    <script src="../modules/fav-music.js" type="module"></script>
   </body>
 </html>
+
+`
+localStorage.setItem("content", favMusicPage);
+// window.localStorage.clear();
