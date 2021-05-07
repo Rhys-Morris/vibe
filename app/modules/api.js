@@ -1,6 +1,7 @@
 const REDIRECT_URI = "http://127.0.0.1:5500/app/pages/gauge-page.html";
 const CLIENT_ID = "772dfd3acef348b6a32830f9e86b2a97";
 const CLIENT_SECRET = "d007b61718e244ee8644829972331a74";
+const SCOPE = "playlist-modify-private playlist-read-private playlist-read-collaborative";
 
 export function requestAuth() {
   const AUTHORIZE_URL = "https://accounts.spotify.com/authorize";
@@ -9,6 +10,7 @@ export function requestAuth() {
   url += "?client_id=" + CLIENT_ID;
   url += "&response_type=code";
   url += "&redirect_uri=" + REDIRECT_URI;
+  url += "&scope=" + SCOPE;
 
   window.location.href = url;
 }
@@ -46,7 +48,8 @@ function buildBodyParameters(code) {
   body += "&code=" + code;
   body += "&redirect_uri=" + REDIRECT_URI;
   body += "&client_id=" + CLIENT_ID;
-  body += "&client_secret=" + CLIENT_SECRET;
+  body += "&client_secret=" + CLIENT_SECRET
+  body += "&scope=" + SCOPE;
 
   fetchAccessToken(body);
 }
@@ -102,7 +105,8 @@ export async function getRecommendations(trackFeatures, genres) {
     }
   );
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
+  return(data);
 }
 
 // https://api.spotify.com/v1/recommendations?limit=150&seed_genres=rock&min_danceability=${minDanceability}&max_danceability=${maxDanceability}&min_valence=${minValence}&max_valence=${maxValence}&min_energy=${minEnergy}&max_energy=${maxEnergy}
