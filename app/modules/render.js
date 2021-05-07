@@ -56,9 +56,12 @@ export function renderSpinner() {
   document.querySelector("main").appendChild(spinner);
 }
 
-export function renderPlaylistPage() {
+export function renderPlaylistPage(playlist) {
   const playlistPage = `<section class="playlist">
-<h1>Get ready to <span class="highlighter">Vibe!</span></h1>
+  <div class="playlist__top-box">
+  <h1>Get ready to <span class="highlighter">Vibe!</span></h1>
+  <a class="playlist__link cta" href=${playlist}>Take me to my playlist!</a>
+  </div>
 <h2 class="playlist__featured-tracks">Featured Tracks</h2>
 <div class="playlist__track-container"></div>
 </section>`;

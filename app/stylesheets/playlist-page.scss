@@ -17,6 +17,21 @@
     width: 50%;
   }
 
+  &__top-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3rem;
+    width: 50rem;
+  }
+
   &__featured-tracks {
     text-align: center;
     margin-top: 3rem;

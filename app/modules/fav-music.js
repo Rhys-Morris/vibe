@@ -6,6 +6,7 @@ import {
   renderSpinner,
   renderTrackCards,
 } from "./render.js";
+import { buildTrackIDs, addToPlaylist } from "./create-playlist.js";
 
 export function addGenreListeners() {
   const genres = document.querySelectorAll(".box-wrap");
@@ -39,18 +40,25 @@ export function addGenreSubmitListener() {
       // Render spinner and clear out html
       clearHtml("main");
       renderSpinner();
-      // Make recommendations request
 
+      // Make recommendations request
       console.log("here");
       const recommendations = await getRecommendations(trackFeatures, genres);
       console.log(recommendations);
+
+      // Limit to 15 tracks max
       let recommendationTracks = recommendations.tracks;
       recommendationTracks =
         recommendationTracks.length > 15
           ? recommendationTracks.slice(0, 15)
           : recommendationTracks;
+
+      // Make call to create a playlist
+      const trackIds = buildTrackIDs(recommendations);
+      const playlist = await addToPlaylist(trackIds);
+
       clearHtml("main");
-      renderPlaylistPage();
+      renderPlaylistPage(playlist);
       renderTrackCards(recommendationTracks);
 
       // Once returns - clear page and render playlist markup and render cards

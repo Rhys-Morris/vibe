@@ -582,6 +582,19 @@ main .container {
   color: #eee;
   width: 50%;
 }
+.playlist__top-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.playlist__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 3rem;
+  width: 50rem;
+}
 .playlist__featured-tracks {
   text-align: center;
   margin-top: 3rem;
