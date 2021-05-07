@@ -43,6 +43,8 @@ main {
   background-size: cover;
   min-height: 90vh;
   padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -231,14 +233,17 @@ main .container {
 }
 
 /** green tick styling **/
-.box-wrap .fa-check-circle {
-  opacity: 0;
+.selected {
+  border: 2px solid white;
 }
 
 .fa-check-circle {
+  z-index: 100;
   position: relative;
   top: 20%;
   left: 90%;
+  width: 5rem;
+  height: 5rem;
   margin: 0;
   padding: 0;
   color: #1e9600;
@@ -537,6 +542,33 @@ main .container {
   transition: 0.3s all;
 }
 
+.loading {
+  border: 12px solid #dfdfdf;
+  border-top: 12px solid black;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 1s linear infinite;
+  align-self: center;
+  margin-top: 20rem;
+}
+.loading.dark {
+  border: 12px solid #444;
+  border-top: 12px solid #bd3627;
+}
+.loading-div {
+  align-self: center;
+  margin-top: 10rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .playlist {
   width: 100%;
   padding: 5rem;
@@ -557,7 +589,7 @@ main .container {
   color: #eee;
   font-weight: 400;
   padding: 2rem;
-  background: #222;
+  background: rgba(34, 34, 34, 0.8);
 }
 .playlist .player-container {
   display: flex;
@@ -575,7 +607,8 @@ main .container {
   align-items: center;
 }
 .playlist__track-card {
-  width: 25rem;
+  width: 30rem;
+  min-height: 50rem;
   padding: 2.5rem;
   background: rgba(34, 34, 34, 0.8);
   border-radius: 1rem;
@@ -585,8 +618,11 @@ main .container {
   border-left: 2px solid #eee;
   border-bottom: 2px solid #eee;
   border-right: 2px solid #eee;
-  margin: 3rem;
+  margin: 1rem;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .playlist__track-card__album-image {
   width: 100%;
@@ -610,11 +646,14 @@ main .container {
   border-radius: 0.3rem;
   background: linear-gradient(to right, #f23637, #fc0b68);
   text-align: center;
+  text-decoration: none;
 }
 .playlist__track-card__play-symbol {
   position: relative;
   font-size: 2rem;
   top: 0.3rem;
+  color: #eee;
+  text-decoration: none;
 }
 
 .footer {

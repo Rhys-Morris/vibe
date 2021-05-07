@@ -9,6 +9,8 @@
   background-size: cover;
   min-height: 90vh;
   padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -177,16 +179,17 @@ main .container {
 }
 
 /** green tick styling **/
-.box-wrap {
-  .fa-check-circle {
-    opacity: 0;
-  }
+.selected {
+  border: 2px solid white;
 }
 
 .fa-check-circle {
+  z-index: 100;
   position: relative;
   top: 20%;
   left: 90%;
+  width: 5rem;
+  height: 5rem;
   margin: 0;
   padding: 0;
   color: #1e9600;

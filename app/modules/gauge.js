@@ -1,5 +1,5 @@
 import { handleRedirect, requestAuth, parseUrl } from "./api.js";
-import { renderError, clearHtml } from "./render.js";
+import { renderError, clearHtml, renderGenrePage } from "./render.js";
 import { addGenreListeners, addGenreSubmitListener } from "./fav-music.js";
 
 let errorRendered = false;
@@ -41,15 +41,11 @@ const gaugeBtn = document.getElementById("gauge-btn");
 gaugeBtn.addEventListener("click", () => {
   energyGauge();
   moodGauge();
-  renderMusicPage();
+  clearHtml("main");
+  renderGenrePage();
   addGenreListeners();
   addGenreSubmitListener();
 });
-
-function renderMusicPage() {
-  const gaugeMainPage = document.getElementById("gauge-main");
-  document.write(localStorage["content"]);
-}
 
 function energyGauge() {
   energy = parseInt(energyLevel.innerText) / 100;
