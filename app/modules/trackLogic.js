@@ -31,14 +31,14 @@ function getVariation(number) {
   return randomInRange / 100;
 }
 
-const trackFeatures = getTrackFeatures(0.3, 0.6);
-const trackFeatures2 = getTrackFeatures(0.2, 0.8);
-const trackFeatures3 = getTrackFeatures(0.5, 0.5);
-const trackFeatures4 = getTrackFeatures(0.8, 0.9);
-const trackFeatures5 = getTrackFeatures(0.4, 0.6);
+// const trackFeatures = getTrackFeatures(0.3, 0.6);
+// const trackFeatures2 = getTrackFeatures(0.2, 0.8);
+// const trackFeatures3 = getTrackFeatures(0.5, 0.5);
+// const trackFeatures4 = getTrackFeatures(0.8, 0.9);
+// const trackFeatures5 = getTrackFeatures(0.4, 0.6);
 
-getRecommendations(trackFeatures, ["rock", "indie", "jazz"]);
-getRecommendations(trackFeatures2, ["rock", "indie", "jazz"]);
-getRecommendations(trackFeatures3, ["rock", "indie", "jazz"]);
-getRecommendations(trackFeatures4, ["rock", "indie", "jazz"]);
-getRecommendations(trackFeatures5, ["rock", "indie", "jazz"]);
+// getRecommendations(trackFeatures, ["rock", "indie", "jazz"]);
+// getRecommendations(trackFeatures2, ["rock", "indie", "jazz"]);
+// getRecommendations(trackFeatures3, ["rock", "indie", "jazz"]);
+// getRecommendations(trackFeatures4, ["rock", "indie", "jazz"]);
+// getRecommendations(trackFeatures5, ["rock", "indie", "jazz"]);

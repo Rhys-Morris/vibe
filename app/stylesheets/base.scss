@@ -1,3 +1,5 @@
+// ----- GLOBAL RESET -----
+
 *,
 *::after,
 *::before {
@@ -8,18 +10,38 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fdeded;
 }
 
 body {
   font-size: 1.6rem;
-  background: linear-gradient(to right, #d39494, #fdeded);
+  background: linear-gradient(145deg, #d38383, #fdeded);
+
+  // Define body size on desktops
+  max-width: 180rem;
+  min-width: 180rem;
+  min-height: 100vh;
   // background: linear-gradient(250deg, rgb(58,173, 217), rgb(82,196,118));
+}
+
+header {
+  width: 100%;
 }
 
 main {
   display: flex;
-  min-height: 80vh;
+  min-height: 85vh;
   flex-direction: column;
+  width: 100%;
 }
+
+// ----- TYPOGRAPHY -----
+
+// Font Options
+
+// font-family: 'Lato', sans-serif;   300, 300 italic, 400, 400 italic

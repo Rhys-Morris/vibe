@@ -1,5 +1,5 @@
 /* Set radius for all circles */
-const r = 250;
+const r = 150;
 const circles = document.querySelectorAll(".circle");
 const total_circles = circles.length;
 for (let i = 0; i < total_circles; i++) {

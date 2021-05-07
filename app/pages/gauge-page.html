@@ -22,10 +22,10 @@
     </header>
     <main id="gauge-main">
       <section class="section--gauge">
-        <h1 class="page-header">How are you feeling today?</h1>
+        <h1 class="page-header">Tell us your vibe, we'll find you the music.</h1>
         <div class="gauges">
           <div class="gauge-container">
-            <h2>Energy</h2>
+            <h2>How pumped are you?</h2>
             <div id="wrapper">
               <svg id="meter">
                 <circle
@@ -40,7 +40,7 @@
                   class="circle range"
                   cx="50%"
                   cy="50%"
-                  stroke="rgba(236, 76, 27, 0.8)"
+                  stroke="#f23637"
                 ></circle>
 
                 <circle
@@ -56,7 +56,7 @@
                   class="circle range"
                   cx="50%"
                   cy="50%"
-                  stroke="#fc0b68"
+                  stroke="#f23637"
                 ></circle>
 
                 <circle id="mask" class="circle" cx="50%" cy="50%"></circle>
@@ -69,11 +69,11 @@
                 ></circle>
               </svg>
               <input id="slider" type="range" min="0" max="100" value="0" />
-              <label id="lbl" id="value" for="">0</label>
+              <label id="lbl" id="value" for="">0%</label>
             </div>
           </div>
           <div class="gauge-container">
-            <h2>Mood</h2>
+            <h2>How's your mood?</h2>
             <div id="wrapper--2">
               <svg id="meter--2">
                 <circle
@@ -88,7 +88,7 @@
                   class="circle range"
                   cx="50%"
                   cy="50%"
-                  stroke="rgba(236, 76, 27, 0.8)"
+                  stroke="#fc0b68"
                 ></circle>
 
                 <circle
@@ -96,7 +96,7 @@
                   class="circle range"
                   cx="50%"
                   cy="50%"
-                  stroke="#f23637"
+                  stroke="#fc0b68"
                 ></circle>
 
                 <circle
@@ -117,14 +117,15 @@
                 ></circle>
               </svg>
               <input id="slider--2" type="range" min="0" max="100" value="0" />
-              <label id="lbl--2" id="value" for="">0</label>
+              <label id="lbl--2" id="value" for="">0%</label>
             </div>
           </div>
         </div>
-
-        <a id="gauge-btn" class="gauge__next cta" href="#">Next</a>
-
+        <a class="next" href="./fav-music.html">Next</a>
       </section>
+      <footer class="footer">
+        <p class="footer__copy">&copy; Vibe 2021</p>
+      </footer>
     </main>
     <script src="../index.js"></script>
     <script src="../modules/fav-music.js" type="module"></script>

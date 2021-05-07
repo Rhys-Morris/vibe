@@ -1,32 +1,91 @@
-.main {
-  padding: 50px;
+.playlist {
+  width: 100%;
+  padding: 5rem;
+  min-height: 90vh;
+  background-image: linear-gradient(
+      145deg,
+      rgba(211, 131, 131, 0.9),
+      rgba(253, 237, 237, 0.6)
+    ),
+    url(./img/playlist-bg.jpg);
+  background-position: center;
+  background-size: cover;
+
   h1 {
-    font-size: 5rem;
-    color: white;
-    border-bottom: 2px solid rgba(66, 66, 66, 0.2);
-    padding-bottom: 30px;
+    font-size: 5.8rem;
+    color: #eee;
     width: 50%;
   }
+
+  &__featured-tracks {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 3rem;
+    color: #eee;
+    font-weight: 400;
+    padding: 2rem;
+    background: #222;
+  }
   .player-container {
-    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     iframe {
-      border-radius: 15px;
+      border-radius: 1.5rem;
     }
   }
-}
 
-footer {
-  padding-right: 20px;
-}
-.links {
-  margin-top: 10px;
-  text-align: right;
-  .border-right {
-    border-right: 2px solid rgba(66, 66, 66, 0.5);
-    padding-right: 5px;
+  &__track-container {
+    padding: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__track-card {
+    width: 25rem;
+    padding: 2.5rem;
+    background: rgba(34, 34, 34, 0.8);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    color: #eee;
+    border-top: 2px solid #eee;
+    border-left: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    border-right: 2px solid #eee;
+    margin: 3rem;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+    &__album-image {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    &__band {
+      font-weight: bolder;
+      font-size: 2rem;
+    }
+    &__album {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+    &__title {
+      padding-top: 1rem;
+    }
+    &__play-track {
+      margin-top: 2rem;
+      align-self: stretch;
+      height: 3.5rem;
+      border-radius: 0.3rem;
+      background: linear-gradient(to right, #f23637, #fc0b68);
+      text-align: center;
+    }
+    &__play-symbol {
+      position: relative;
+      font-size: 2rem;
+      top: 0.3rem;
+    }
   }
 }
