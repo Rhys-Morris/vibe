@@ -41,6 +41,7 @@ export function addGenreSubmitListener() {
       renderSpinner();
       // Make recommendations request
 
+      console.log("here");
       const recommendations = await getRecommendations(trackFeatures, genres);
       console.log(recommendations);
       let recommendationTracks = recommendations.tracks;

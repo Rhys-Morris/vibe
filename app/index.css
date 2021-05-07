@@ -233,8 +233,8 @@ main .container {
 }
 
 /** green tick styling **/
-.selected {
-  border: 2px solid white;
+.box-wrap .fa-check-circle {
+  opacity: 0;
 }
 
 .fa-check-circle {

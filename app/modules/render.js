@@ -203,7 +203,7 @@ export function renderGenrePage() {
           </div>
         </div>
       </div>
-      <a  id="genre-submit" class="next next--genres" href="./playlist-page.html">Next></a>
+      <a  id="genre-submit" class="next next--genres" >Next></a>
       </section>
 `;
   document.querySelector("main").innerHTML = favMusicPage;
