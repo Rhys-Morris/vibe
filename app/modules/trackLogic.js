@@ -19,7 +19,7 @@ export function getTrackFeatures(happy, energyLevel) {
 }
 
 // Get a randomised number within a specified range
-function getVariation(number) {
+export function getVariation(number) {
   let lowRange = number > 0.05 ? number - 0.05 : number;
   let highRange = number < 0.95 ? number + 0.05 : number;
 

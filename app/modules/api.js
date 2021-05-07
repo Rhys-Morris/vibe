@@ -1,6 +1,8 @@
 const REDIRECT_URI = "http://127.0.0.1:5500/app/pages/gauge-page.html";
 const CLIENT_ID = "772dfd3acef348b6a32830f9e86b2a97";
 const CLIENT_SECRET = "d007b61718e244ee8644829972331a74";
+const SCOPE =
+  "playlist-modify-private playlist-read-private playlist-read-collaborative";
 
 export function requestAuth() {
   const AUTHORIZE_URL = "https://accounts.spotify.com/authorize";
@@ -9,6 +11,7 @@ export function requestAuth() {
   url += "?client_id=" + CLIENT_ID;
   url += "&response_type=code";
   url += "&redirect_uri=" + REDIRECT_URI;
+  url += "&scope=" + SCOPE;
 
   window.location.href = url;
 }
@@ -17,7 +20,7 @@ export function parseUrl(url, split) {
   return url.split(split)[1];
 }
 
-async function fetchAccessToken(params) {
+export async function fetchAccessToken(params) {
   try {
     const TOKEN_URL = "https://accounts.spotify.com/api/token";
     const response = await fetch(TOKEN_URL, {
@@ -48,6 +51,7 @@ function buildBodyParameters(code) {
   body += "&redirect_uri=" + REDIRECT_URI;
   body += "&client_id=" + CLIENT_ID;
   body += "&client_secret=" + CLIENT_SECRET;
+  body += "&scope=" + SCOPE;
 
   fetchAccessToken(body);
 }
