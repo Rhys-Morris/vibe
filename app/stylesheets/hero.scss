@@ -15,7 +15,6 @@
   background-size: cover;
 
   &__box {
-    // margin-top: 22.5rem;
     display: flex;
     flex-direction: column;
     color: #efefef;
@@ -23,8 +22,16 @@
     padding: 3rem;
     border-radius: 1rem;
     width: 70%;
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: 1025px) { // v big screen
       width: 50%;
+    }
+    @media screen and (max-width: 768px) { // tablet
+      width: 90%;
+    }
+    @media screen and (max-width: 500px) { // phone
+      width: 80%;
+      margin: 2rem 0;
+      background: rgba(34, 34, 34, 0.2);
     }
   }
 
@@ -34,20 +41,37 @@
     -webkit-text-fill-color: transparent;
     font-size: 4rem;
     margin-bottom: 1rem;
+    @media screen and (max-width: 500px) { // phone
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
   }
   &__title {
     font-size: 5rem;
-
     font-weight: 400;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+    @media screen and (max-width: 500px) { // phone
+      font-size: 3.5rem;
+      margin-top: 1.5rem;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+    }
   }
 
   &__subtitle {
     margin-top: 2rem;
     font-weight: 400;
     font-size: 2.4rem;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+    @media screen and (max-width: 500px) { // phone
+      font-size: 2.1rem;
+    }
   }
   &__cta-box {
     display: flex;
+
+    @media screen and (max-width: 500px) { // phone
+      justify-content: center;
+    }
 
     & > *:first-child {
       margin-right: 3rem;

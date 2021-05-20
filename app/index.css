@@ -402,6 +402,18 @@ main .container {
     width: 50%;
   }
 }
+@media screen and (max-width: 768px) {
+  .hero__box {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero__box {
+    width: 80%;
+    margin: 2rem 0;
+    background: rgba(34, 34, 34, 0.2);
+  }
+}
 .hero__logo {
   background: linear-gradient(to right, #f23637, #fc0b68);
   -webkit-background-clip: text;
@@ -409,17 +421,42 @@ main .container {
   font-size: 4rem;
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 500px) {
+  .hero__logo {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
 .hero__title {
   font-size: 5rem;
   font-weight: 400;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+}
+@media screen and (max-width: 500px) {
+  .hero__title {
+    font-size: 3.5rem;
+    margin-top: 1.5rem;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+  }
 }
 .hero__subtitle {
   margin-top: 2rem;
   font-weight: 400;
   font-size: 2.4rem;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+}
+@media screen and (max-width: 500px) {
+  .hero__subtitle {
+    font-size: 2.1rem;
+  }
 }
 .hero__cta-box {
   display: flex;
+}
+@media screen and (max-width: 500px) {
+  .hero__cta-box {
+    justify-content: center;
+  }
 }
 .hero__cta-box > *:first-child {
   margin-right: 3rem;
