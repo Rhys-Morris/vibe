@@ -21,9 +21,7 @@ html {
 body {
   font-size: 1.6rem;
   background: linear-gradient(145deg, #d38383, #fdeded);
-  max-width: 180rem;
-  min-width: 180rem;
-  min-height: 100vh;
+  min-width: 100vw;
 }
 
 header {
@@ -385,19 +383,36 @@ main .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-image: linear-gradient(145deg, rgba(211, 131, 131, 0.9), rgba(253, 237, 237, 0.5)), url(./img/hero-bg.jpg);
   background-position: center;
   background-size: cover;
 }
 .hero__box {
-  margin-top: 22.5rem;
   display: flex;
   flex-direction: column;
-  width: 50%;
   color: #efefef;
-  background: rgba(34, 34, 34, 0.1);
+  background: rgba(34, 34, 34, 0.15);
   padding: 3rem;
   border-radius: 1rem;
+  width: 70%;
+}
+@media screen and (min-width: 1025px) {
+  .hero__box {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__box {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero__box {
+    width: 80%;
+    margin: 2rem 0;
+    background: rgba(34, 34, 34, 0.2);
+  }
 }
 .hero__logo {
   background: linear-gradient(to right, #f23637, #fc0b68);
@@ -406,17 +421,42 @@ main .container {
   font-size: 4rem;
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 500px) {
+  .hero__logo {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
 .hero__title {
   font-size: 5rem;
   font-weight: 400;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+}
+@media screen and (max-width: 500px) {
+  .hero__title {
+    font-size: 3.5rem;
+    margin-top: 1.5rem;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+  }
 }
 .hero__subtitle {
   margin-top: 2rem;
   font-weight: 400;
   font-size: 2.4rem;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+}
+@media screen and (max-width: 500px) {
+  .hero__subtitle {
+    font-size: 2.1rem;
+  }
 }
 .hero__cta-box {
   display: flex;
+}
+@media screen and (max-width: 500px) {
+  .hero__cta-box {
+    justify-content: center;
+  }
 }
 .hero__cta-box > *:first-child {
   margin-right: 3rem;
@@ -468,6 +508,57 @@ main .container {
   padding: 1rem 1.5rem;
 }
 
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #eee;
+}
+
+@media only screen and (max-width: 550px) {
+  .nav__nav-list {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+  }
+
+  .nav__nav-list.active {
+    top: 7rem;
+  }
+
+  .nav__nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
 .cta {
   border-radius: 2rem;
   padding: 1.5rem;
