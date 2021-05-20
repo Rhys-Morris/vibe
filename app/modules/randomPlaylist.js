@@ -1,4 +1,4 @@
-function randomNumber(){
+export function randomNumber(){
   return Math.random().toFixed(1);
 }
 

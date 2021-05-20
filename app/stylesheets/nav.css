@@ -1,0 +1,60 @@
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 6rem;
+  background-color: #111;
+  color: #eee;
+}
+
+.nav__logo {
+  font-size: 4rem;
+  font-weight: 500;
+  background: -webkit-gradient(linear, left top, right top, from(#f23637), to(#fc0b68));
+  background: linear-gradient(to right, #f23637, #fc0b68);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+.nav__nav-item > * {
+  margin-left: 5rem;
+}
+
+.nav__link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 1rem;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.nav__link:hover:not(:last-child) {
+  border-bottom: 2px solid #fc0b68;
+}
+
+.nav__link:last-child {
+  border-radius: 0.7rem;
+  padding: 1rem 1.5rem;
+}
+/*# sourceMappingURL=nav.css.map */

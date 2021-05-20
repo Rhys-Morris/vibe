@@ -1,0 +1,70 @@
+.hero {
+  width: 100%;
+  min-height: 86.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: linear-gradient(145deg, rgba(211, 131, 131, 0.9), rgba(253, 237, 237, 0.5)), url(./img/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__box {
+  margin-top: 22.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  color: #efefef;
+  background: rgba(34, 34, 34, 0.1);
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.hero__logo {
+  background: -webkit-gradient(linear, left top, right top, from(#f23637), to(#fc0b68));
+  background: linear-gradient(to right, #f23637, #fc0b68);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero__title {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.hero__subtitle {
+  margin-top: 2rem;
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.hero__cta-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__cta-box > *:first-child {
+  margin-right: 3rem;
+}
+
+.hero__cta {
+  margin-top: 3rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=hero.css.map */

@@ -1,0 +1,149 @@
+.section--gauge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  min-height: 86.5vh;
+  background-image: linear-gradient(145deg, rgba(211, 131, 131, 0.9), rgba(253, 237, 237, 0.5)), url(./img/mood.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #eee;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.section--gauge h1 {
+  margin-top: 8rem;
+  font-weight: 400;
+  color: #222;
+  text-align: center;
+}
+
+.page-header {
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.gauges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gauges h1,
+.gauges h2 {
+  font-size: 3.4rem;
+  text-align: center;
+  color: #eee;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.gauge-container {
+  margin-top: 6rem;
+  padding-top: 7.5rem;
+  padding-left: 7.5rem;
+  padding-right: 7.55rem;
+  background: rgba(34, 34, 34, 0.4);
+  border-radius: 1rem;
+}
+
+.gauge-container h2 {
+  margin-bottom: 1rem;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#wrapper,
+#wrapper--2 {
+  position: relative;
+  margin: auto;
+}
+
+#meter,
+#meter--2 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.circle {
+  fill: none;
+}
+
+.outline,
+#mask,
+#mask--2 {
+  stroke: #222;
+  stroke-width: 65;
+}
+
+.range {
+  stroke-width: 60;
+}
+
+#slider,
+#slider--2,
+#lbl,
+#lbl--2 {
+  position: absolute;
+}
+
+#slider,
+#slider--2 {
+  cursor: pointer;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 70%;
+  width: 96%;
+}
+
+#lbl,
+#lbl--2 {
+  background: -webkit-gradient(linear, left top, right top, from(#f23637), to(#fc0b68));
+  background: linear-gradient(to right, #f23637, #fc0b68);
+  border-radius: 2px;
+  color: white;
+  font-family: "courier new";
+  font-size: 15pt;
+  font-weight: bold;
+  padding: 4px 4px 2px 4px;
+  right: -65px;
+  top: 67%;
+  padding: 1rem;
+}
+/*# sourceMappingURL=gauge-page.css.map */
