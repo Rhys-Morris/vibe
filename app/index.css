@@ -21,8 +21,8 @@ html {
 body {
   font-size: 1.6rem;
   background: linear-gradient(145deg, #d38383, #fdeded);
-  max-width: 180rem;
-  min-width: 180rem;
+  max-width: 200rem;
+  min-width: 100vw;
   min-height: 100vh;
 }
 
@@ -32,7 +32,6 @@ header {
 
 main {
   display: flex;
-  min-height: 85vh;
   flex-direction: column;
   width: 100%;
 }
@@ -255,20 +254,23 @@ main .container {
 .section--gauge {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  min-height: 86.5vh;
+  align-items: center;
+  min-height: 85vh;
   background-image: linear-gradient(145deg, rgba(211, 131, 131, 0.9), rgba(253, 237, 237, 0.5)), url(./img/mood.jpg);
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   color: #eee;
   width: 100%;
-  padding-bottom: 3rem;
 }
 .section--gauge h1 {
-  margin-top: 8rem;
+  width: 90%;
+  justify-self: center;
+  margin-top: 5rem;
   font-weight: 400;
-  color: #222;
+  color: #eee;
   text-align: center;
+  padding: 1rem;
+  background: rgba(34, 34, 34, 0.5);
 }
 
 .page-header {
@@ -293,11 +295,12 @@ main .container {
 }
 
 .gauge-container {
+  margin: 0 3rem;
   margin-top: 6rem;
   padding-top: 7.5rem;
   padding-left: 7.5rem;
   padding-right: 7.55rem;
-  background: rgba(34, 34, 34, 0.4);
+  background: rgba(34, 34, 34, 0.5);
   border-radius: 1rem;
 }
 .gauge-container h2 {
@@ -484,7 +487,7 @@ main .container {
 }
 
 .next {
-  margin-top: 10rem;
+  margin-top: 3rem;
   align-self: flex-end;
   text-transform: uppercase;
   text-decoration: none;
@@ -495,6 +498,8 @@ main .container {
   padding: 1rem 3rem;
   color: #eee;
   text-align: center;
+  outline: none;
+  border: none;
   cursor: pointer;
   background: linear-gradient(to right, #f23637, #fc0b68);
 }

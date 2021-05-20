@@ -1,4 +1,4 @@
-const REDIRECT_URI = "http://127.0.0.1:5500/app/pages/gauge-page.html";
+const REDIRECT_URI = "https://its-a-vibe.netlify.app/pages/gauge-page.html";
 const CLIENT_ID = "772dfd3acef348b6a32830f9e86b2a97";
 const CLIENT_SECRET = "d007b61718e244ee8644829972331a74";
 const SCOPE =
