@@ -391,11 +391,16 @@ main .container {
 .hero__box {
   display: flex;
   flex-direction: column;
-  width: 50%;
   color: #efefef;
-  background: rgba(34, 34, 34, 0.1);
+  background: rgba(34, 34, 34, 0.15);
   padding: 3rem;
   border-radius: 1rem;
+  width: 70%;
+}
+@media screen and (min-width: 1025px) {
+  .hero__box {
+    width: 50%;
+  }
 }
 .hero__logo {
   background: linear-gradient(to right, #f23637, #fc0b68);
