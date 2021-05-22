@@ -272,6 +272,7 @@ main .container {
 .page-header {
   font-weight: 300;
   font-size: 4rem;
+  text-shadow: 0.5px 0.5px rgba(245, 245, 245, 0.555);
 }
 
 .gauges {
@@ -436,7 +437,6 @@ main .container {
   .hero__title {
     font-size: 3.5rem;
     margin-top: 1.5rem;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
   }
 }
 .hero__subtitle {
