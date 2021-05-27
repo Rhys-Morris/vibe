@@ -21,13 +21,7 @@ html {
 body {
   font-size: 1.6rem;
   background: linear-gradient(145deg, #d38383, #fdeded);
-<<<<<<< HEAD
-  max-width: 200rem;
   min-width: 100vw;
-  min-height: 100vh;
-=======
-  min-width: 100vw;
->>>>>>> a79c343f16ea4eab31064250f6a9fb57a0cbe8f4
 }
 
 header {
