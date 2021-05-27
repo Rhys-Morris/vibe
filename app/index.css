@@ -805,4 +805,78 @@ main .container {
   color: #eee;
 }
 
+.about {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(145deg, #d38383e6, rgba(253, 237, 237, 0.5)), url(./img/about-bg.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.about__heading {
+  text-align: center;
+  margin: 3rem;
+  font-size: 3rem;
+}
+.about a {
+  line-height: 2.3rem;
+  text-decoration: none;
+}
+
+.about-container {
+  width: 70%;
+  margin-top: 6rem;
+  padding-top: 2rem;
+  padding-left: 7.5rem;
+  padding-right: 7.55rem;
+  background: rgba(34, 34, 34, 0.38);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #efefef;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+}
+
+.developer-heading {
+  margin: 3rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.developer-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.developer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 3rem;
+  width: 40rem;
+}
+.developer-card .dev-heading {
+  margin-bottom: 1rem;
+}
+
+.dev-photo {
+  width: 17rem;
+  height: 17rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.text-description {
+  line-height: 2.5rem;
+  border: 1px solid red;
+  width: 80%;
+  font-size: 1.7rem;
+}
+
 /*# sourceMappingURL=index.css.map */
