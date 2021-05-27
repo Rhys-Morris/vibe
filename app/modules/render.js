@@ -77,10 +77,9 @@ export function renderGenrePage() {
           <span>Select at least 3 genres</span>
         </div>
 
-        <!-- /** First Row **/ -->
-        <div class="content first-row">
-          <div class="box-wrap" data-genre="metal">
-            <i class="fas fa-check-circle fa-4x"></i>
+        <div class="content">
+          <div class="box-wrap genre" data-genre="Metal">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square metal">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -89,8 +88,8 @@ export function renderGenrePage() {
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="rap">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="genre box-wrap" data-genre="Rap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square rap">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -99,8 +98,8 @@ export function renderGenrePage() {
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="alternative">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="genre box-wrap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square alternative">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -109,8 +108,8 @@ export function renderGenrePage() {
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="pop">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="box-wrap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square pop">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -118,12 +117,9 @@ export function renderGenrePage() {
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- /** second Row **/ -->
-        <div class="content second-row">
-          <div class="box-wrap" data-genre="rock">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="box-wrap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square rock">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -132,8 +128,8 @@ export function renderGenrePage() {
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="techno">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="box-wrap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square techno">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -142,8 +138,8 @@ export function renderGenrePage() {
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="country">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="box-wrap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square country">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -152,8 +148,8 @@ export function renderGenrePage() {
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="jazz">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="box-wrap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square jazz">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -161,12 +157,9 @@ export function renderGenrePage() {
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- /** Third Row **/ -->
-        <div class="content third-row">
-          <div class="box-wrap" data-genre="indie">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="box-wrap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square indie">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -175,8 +168,8 @@ export function renderGenrePage() {
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="hip-hop">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="box-wrap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square hip-hop">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -185,8 +178,8 @@ export function renderGenrePage() {
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="reggae">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="box-wrap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square reggae">
               <div class="circle">
                 <div class="inner-cirlce"></div>
@@ -195,8 +188,8 @@ export function renderGenrePage() {
             </div>
           </div>
 
-          <div class="box-wrap" data-genre="acoustic">
-            <i class="fas fa-check-circle fa-4x"></i>
+          <div class="box-wrap">
+            <i class="fas fa-check-circle fa-3x"></i>
             <div class="square acoustic">
               <div class="circle">
                 <div class="inner-cirlce"></div>
