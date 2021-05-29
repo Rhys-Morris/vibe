@@ -18,17 +18,22 @@
     font-size: 3rem;
   }
   a{
+    cursor: pointer;
     line-height: 2.3rem;
     text-decoration: none;
+    color: #efefef;
+    text-shadow: 0 0 1px #fc0b68;
+    &:hover {
+      transform: translate(-1px, -1.5px);
+      transition: 0.3s ease-in-out;
+    }
   }
 }
 
 .about-container{
   width: 70%;
-  margin-top: 6rem;
-  padding-top: 2rem;
-  padding-left: 7.5rem;
-  padding-right: 7.55rem;
+  margin: 6rem 0;
+  padding: 3rem 5rem;
   background: rgba(34, 34, 34, 0.38);
   border-radius: 1rem;
   display: flex;
@@ -36,6 +41,22 @@
   align-items: center;
   color: #efefef;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+  @media screen and (min-width: 1600px) {
+    // width: 50%;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 1rem;
+  }
+  @media screen and (max-width: 768px) { // tablet
+    width: 80%;
+    padding: 1.5rem;
+  }
+  @media screen and (max-width: 500px) { // phone
+    width: 80%;
+    margin: 2rem 0;
+    background: rgba(34, 34, 34, 0.35);
+    padding: 1rem;
+  }
 }
 
 .developer-heading{
@@ -44,34 +65,48 @@
   font-size: 3rem;
 }
 
+.text-description{
+  line-height: 2.5rem;
+  width: 90%;
+  font-size: 1.7rem;
+  @media screen and (min-width: 1500px) {
+    width: 70%;
+  }
+  p {
+    padding-bottom: 1rem;
+  }
+}
+
 .developer-cards{
-  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  // border: 1px solid red;
 }
 
 .developer-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 3rem;
-  width: 40rem;
+  margin: 0 3rem 2rem 3rem;
   .dev-heading{
     margin-bottom: 1rem;
   }
-}
-
-.dev-photo{
-  width: 17rem;
-  height: 17rem;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-bottom: 2rem;
-}
-
-.text-description{
-  line-height: 2.5rem;
-  width: 80%;
-  font-size: 1.7rem;
+  .dev-photo{
+    width: 17rem;
+    height: 17rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 768px) { // tablet
+      width: 13rem;
+      height: 13rem;
+    }
+    @media screen and (max-width: 500px) { // phone
+      width: 10rem;
+      height: 10rem;
+    }
+  }
 }
