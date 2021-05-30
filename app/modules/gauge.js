@@ -1,17 +1,17 @@
-// import { handleRedirect, requestAuth, parseUrl } from "./api.js";
+import { handleRedirect, requestAuth, parseUrl } from "./api.js";
 import { renderError, clearHtml, renderGenrePage } from "./render.js";
 import { addGenreListeners, addGenreSubmitListener } from "./fav-music.js";
 
 let errorRendered = false;
 
 // Check user has auth'd
-// if (parseUrl(window.location.href, "error=") === "access_denied") {
-//   errorRendered = true;
-//   clearHtml("main");
-//   renderError(
-//     "You must authorise access to a Spotify account to utilise this application!"
-//   );
-// }
+if (parseUrl(window.location.href, "error=") === "access_denied") {
+  errorRendered = true;
+  clearHtml("main");
+  renderError(
+    "You must authorise access to a Spotify account to utilise this application!"
+  );
+}
 
 if (!localStorage.getItem("accessToken")) {
   // We have been redirected from Spotify with an access code
