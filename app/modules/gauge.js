@@ -39,7 +39,6 @@ let mood;
 // Listen for click on next - get the mood, energy and render new page
 const gaugeBtn = document.getElementById("gauge-btn");
 gaugeBtn.addEventListener("click", () => {
-  console.log("here")
   energyGauge();
   moodGauge();
   clearHtml("main");
