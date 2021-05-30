@@ -1,4 +1,5 @@
-const REDIRECT_URI = "https://its-a-vibe.netlify.app/pages/gauge-page.html";
+const REDIRECT_URI =
+  "https://pedantic-ritchie-cfef15.netlify.app/pages/gauge-page.html";
 const CLIENT_ID = "772dfd3acef348b6a32830f9e86b2a97";
 const CLIENT_SECRET = "d007b61718e244ee8644829972331a74";
 const SCOPE =
@@ -87,9 +88,8 @@ export async function getRecommendations(trackFeatures, genres) {
   const minDanceability = (danceability < 0.11 ? 0 : danceability - 0).toFixed(
     2
   );
-  const maxDanceability = (danceability > 0.89
-    ? 1
-    : danceability + 0.1
+  const maxDanceability = (
+    danceability > 0.89 ? 1 : danceability + 0.1
   ).toFixed(2);
   const minValence = (valence < 0.11 ? 0 : valence - 0.1).toFixed(2);
   const maxValence = (valence > 0.89 ? 1 : valence + 0.1).toFixed(2);

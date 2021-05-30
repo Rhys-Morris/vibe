@@ -1,4 +1,4 @@
-// import { handleRedirect, requestAuth, parseUrl } from "./api.js";
+import { handleRedirect, requestAuth, parseUrl } from "./api.js";
 import { renderError, clearHtml, renderGenrePage } from "./render.js";
 import { addGenreListeners, addGenreSubmitListener } from "./fav-music.js";
 

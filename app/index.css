@@ -267,7 +267,7 @@ main .container {
 
 /** green tick styling **/
 .box-wrap .fa-check-circle {
-  opacity: 1;
+  opacity: 0;
 }
 
 .fa-check-circle {

@@ -23,7 +23,6 @@ function getGenres() {
   const mappedGenres = selectedGenres.map((element) => {
     return element.dataset.genre;
   });
-  console.log(mappedGenres);
   return mappedGenres;
 }
 
@@ -42,9 +41,7 @@ export function addGenreSubmitListener() {
       renderSpinner();
 
       // Make recommendations request
-      console.log("here");
       const recommendations = await getRecommendations(trackFeatures, genres);
-      console.log(recommendations);
 
       // Limit to 15 tracks max
       let recommendationTracks = recommendations.tracks;
