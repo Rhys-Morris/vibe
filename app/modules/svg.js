@@ -73,7 +73,6 @@ const mask2 = document.querySelector("#mask--2");
 
 function range_change_event() {
   const percent = this.value;
-  console.log(this);
   if (this === slider) {
     const meter_value = semi_cf - (percent * semi_cf) / 100;
     mask.setAttribute("stroke-dasharray", meter_value + "," + cf);
