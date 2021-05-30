@@ -820,14 +820,17 @@ main .container {
   margin: 3rem;
   font-size: 3rem;
 }
-.about a {
+
+a.about-link {
+  display: block;
   cursor: pointer;
   line-height: 2.3rem;
   text-decoration: none;
   color: #efefef;
   text-shadow: 0 0 1px #fc0b68;
 }
-.about a:hover {
+a.about-link:hover {
+  text-shadow: 0 0 10px #fc0b68, 1px 1px 1px rgba(0, 0, 0, 0.2);
   transform: translate(-1px, -1.5px);
   transition: 0.3s ease-in-out;
 }
@@ -843,6 +846,11 @@ main .container {
   align-items: center;
   color: #efefef;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+}
+@media screen and (min-width: 1600px) {
+  .about-container {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .about-container {

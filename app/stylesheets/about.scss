@@ -17,16 +17,19 @@
     margin: 3rem;
     font-size: 3rem;
   }
-  a{
-    cursor: pointer;
-    line-height: 2.3rem;
-    text-decoration: none;
-    color: #efefef;
-    text-shadow: 0 0 1px #fc0b68;
-    &:hover {
-      transform: translate(-1px, -1.5px);
-      transition: 0.3s ease-in-out;
-    }
+}
+
+a.about-link{
+  display: block;
+  cursor: pointer;
+  line-height: 2.3rem;
+  text-decoration: none;
+  color: #efefef;
+  text-shadow: 0 0 1px #fc0b68;
+  &:hover {
+    text-shadow: 0 0 10px #fc0b68, 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transform: translate(-1px, -1.5px);
+    transition: 0.3s ease-in-out;
   }
 }
 
@@ -42,7 +45,7 @@
   color: #efefef;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
   @media screen and (min-width: 1600px) {
-    // width: 50%;
+    width: 50%;
   }
   @media screen and (max-width: 1024px) {
     padding: 1rem;
