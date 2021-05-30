@@ -21,7 +21,7 @@ export function addGenreListeners() {
 function getGenres() {
   const selectedGenres = Array.from(document.querySelectorAll(".selected"));
   const mappedGenres = selectedGenres.map((element) => {
-    return element.dataset.genre;
+    return element.dataset.genre.toLowerCase();
   });
   return mappedGenres;
 }

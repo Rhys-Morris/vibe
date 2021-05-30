@@ -81,7 +81,7 @@ function buildGenresQueryString(genres) {
 }
 
 export async function getRecommendations(trackFeatures, genres) {
-  const { danceability, tempo, valence, energy } = trackFeatures;
+  const { danceability, valence, energy } = trackFeatures;
   const genresQuery = buildGenresQueryString(genres);
 
   // Get min and max values for range requests
