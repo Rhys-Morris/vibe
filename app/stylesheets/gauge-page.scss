@@ -141,11 +141,13 @@
   font-family: "courier new";
   font-size: 15pt;
   font-weight: bold;
-  padding: 4px 4px 2px 4px;
+  // padding: 4px 4px 2px 4px;
   right: -65px;
   top: 67%;
   padding: 1rem;
   @media screen and (max-width: 500px) { // phone
-    right: -35px;
+    right: -30px;
+    padding: 0.5rem;
+    font-size: 12pt;
   }
 }
