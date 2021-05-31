@@ -15,6 +15,11 @@
     font-size: 5.8rem;
     color: #eee;
     width: 50%;
+    @media screen and (max-width: 500px) { // phone
+      width: 100%;
+      font-size: 4.5rem;
+      padding-bottom: 2rem;
+    }
   }
 
   &__top-box {
@@ -23,6 +28,13 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    @media screen and (max-width: 500px) { // phone
+      flex-direction: column;
+      a{
+        font-size: 2rem;
+        align-self: flex-end;
+      }
+    }
   }
 
   &__link {

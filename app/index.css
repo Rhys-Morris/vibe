@@ -737,12 +737,28 @@ main .container {
   color: #eee;
   width: 50%;
 }
+@media screen and (max-width: 500px) {
+  .playlist h1 {
+    width: 100%;
+    font-size: 4.5rem;
+    padding-bottom: 2rem;
+  }
+}
 .playlist__top-box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .playlist__top-box {
+    flex-direction: column;
+  }
+  .playlist__top-box a {
+    font-size: 2rem;
+    align-self: flex-end;
+  }
 }
 .playlist__link {
   text-decoration: none;
