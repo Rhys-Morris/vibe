@@ -16,12 +16,16 @@ html {
   flex-direction: column;
   align-items: center;
   background-color: #fdeded;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 body {
   font-size: 1.6rem;
   background: linear-gradient(145deg, #d38383, #fdeded);
-  min-width: 100vw;
+  width: 100%;
+  height: 100%;
 }
 
 header {
@@ -287,15 +291,14 @@ main .container {
 
 .section--gauge {
   width: 100%;
-  height: auto;
+  min-height: 86.5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: linear-gradient(145deg, rgba(211, 131, 131, 0.9), rgba(253, 237, 237, 0.5)), url(./img/mood.jpg);
-  background-position: center top;
+  background-position: center;
   background-size: cover;
   color: #eee;
-  border: 3px solid green;
 }
 .section--gauge h1 {
   width: 90%;
@@ -315,6 +318,7 @@ main .container {
 }
 
 .gauges {
+  width: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -341,6 +345,12 @@ main .container {
 }
 .gauge-container h2 {
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .gauge-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 @font-face {
