@@ -429,13 +429,14 @@ main .container {
   right: -65px;
   top: 67%;
   padding: 1rem;
+  border-radius: 1rem;
 }
 @media screen and (max-width: 500px) {
   #lbl,
 #lbl--2 {
-    right: -30px;
-    padding: 0.5rem;
-    font-size: 12pt;
+    right: -25px;
+    padding: 0.7rem;
+    font-size: 13pt;
   }
 }
 
