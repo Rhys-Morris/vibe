@@ -414,7 +414,7 @@ main .container {
 @media screen and (max-width: 500px) {
   #slider,
 #slider--2 {
-    width: 80%;
+    width: 85%;
   }
 }
 
