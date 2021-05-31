@@ -434,7 +434,7 @@ main .container {
 @media screen and (max-width: 500px) {
   #lbl,
 #lbl--2 {
-    right: -18px;
+    right: -14px;
     padding: 0.7rem;
     font-size: 13pt;
   }
