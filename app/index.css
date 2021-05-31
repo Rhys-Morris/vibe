@@ -182,8 +182,8 @@ main .container {
 }
 @media screen and (max-width: 500px) {
   .content .circle {
-    height: 158px;
-    width: 166px;
+    height: 148px;
+    width: 156px;
   }
 }
 
@@ -199,8 +199,8 @@ main .container {
 }
 @media screen and (max-width: 500px) {
   .inner-cirlce {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
   }
 }
 
