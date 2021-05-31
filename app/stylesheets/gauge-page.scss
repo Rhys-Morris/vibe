@@ -129,6 +129,9 @@
   right: 0;
   top: 70%;
   width: 96%;
+  @media screen and (max-width: 500px) { // phone
+    width: 80%;
+  }
 }
 #lbl,
 #lbl--2 {
@@ -142,4 +145,7 @@
   right: -65px;
   top: 67%;
   padding: 1rem;
+  @media screen and (max-width: 500px) { // phone
+    right: -35px;
+  }
 }

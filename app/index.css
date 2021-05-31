@@ -411,6 +411,12 @@ main .container {
   top: 70%;
   width: 96%;
 }
+@media screen and (max-width: 500px) {
+  #slider,
+#slider--2 {
+    width: 80%;
+  }
+}
 
 #lbl,
 #lbl--2 {
@@ -424,6 +430,12 @@ main .container {
   right: -65px;
   top: 67%;
   padding: 1rem;
+}
+@media screen and (max-width: 500px) {
+  #lbl,
+#lbl--2 {
+    right: -35px;
+  }
 }
 
 .hero {
