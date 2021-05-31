@@ -1,5 +1,4 @@
 /* Set radius for all circles */
-console.log(window.screen.width);
 const r = window.screen.width >= 550 ? 150 : 100;
 const circles = document.querySelectorAll(".circle");
 const total_circles = circles.length;
