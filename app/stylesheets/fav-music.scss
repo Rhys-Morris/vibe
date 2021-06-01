@@ -224,4 +224,7 @@ main .container {
   color: #f2c94c;
   color: #fff;
   transition: 0.2s all;
+  @media screen and (max-width: 500px) { // phone
+    top: 10%;
+  }
 }
