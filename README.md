@@ -8,7 +8,7 @@ Live site: <https://its-a-vibe.netlify.app/>
 * [1.Info](#1-info)<br>
    * [tech stack](#tech-stack)
    * [purpose](#purpose)
-* [2.Usage](#3-usage)<br>
+* [2.Usage](#2-usage)<br>
    * [permissions](#permissions)
    * [features](#features)
 
