@@ -10,6 +10,9 @@
     url(./img/playlist-bg.jpg);
   background-position: center;
   background-size: cover;
+  @media screen and (max-width: 500px) { // phone
+    padding: 2rem;
+  }
 
   h1 {
     font-size: 5.8rem;

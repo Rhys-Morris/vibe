@@ -660,6 +660,7 @@ main .container {
 
 .highlighter {
   background: linear-gradient(to right, #f23637, #fc0b68);
+  text-shadow: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -731,6 +732,11 @@ main .container {
   background-image: linear-gradient(145deg, rgba(211, 131, 131, 0.9), rgba(253, 237, 237, 0.6)), url(./img/playlist-bg.jpg);
   background-position: center;
   background-size: cover;
+}
+@media screen and (max-width: 500px) {
+  .playlist {
+    padding: 2rem;
+  }
 }
 .playlist h1 {
   font-size: 5.8rem;
