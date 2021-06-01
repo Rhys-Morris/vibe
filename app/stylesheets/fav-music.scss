@@ -135,8 +135,8 @@ main .container {
   border-radius: 150px;
   cursor: pointer;
   @media screen and (max-width: 500px) { // phone
-    height: 128px;
-    width: 136px;
+    height: 118px;
+    width: 126px;
   }
 }
 .inner-cirlce {
@@ -149,8 +149,8 @@ main .container {
   left: 50%;
   transform: translate(-50%, -50%);
   @media screen and (max-width: 500px) { // phone
-    height: 1.7rem;
-    width: 1.7rem;
+    height: 1.5rem;
+    width: 1.5rem;
   }
 }
 .genre-name {
