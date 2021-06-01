@@ -42,7 +42,7 @@ export function renderTrackCards(tracks) {
           <p class="playlist__track-card__title">${track.name}</p>
           <a href="${
             track.external_urls.spotify
-          }" class="playlist__track-card__play-track"><span class="playlist__track-card__play-symbol">▶</span></a>
+          }" class="playlist__track-card__play-track"><span class="playlist__track-card__play-symbol"><i class="fas fa-play"></i></span></a>
         </div>
     `;
     markup += trackCard;
