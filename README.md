@@ -10,9 +10,9 @@ Live site: <https://its-a-vibe.netlify.app/>
    * [permissions](#permissions)
    * [features](#features)
 
-![screenshot of Vibe landing page](./app/img/readme-img.jpg)
-
 ___
+
+![screenshot of Vibe landing page](./app/img/readme-img.jpg)
 
 ## 1. Info
 
