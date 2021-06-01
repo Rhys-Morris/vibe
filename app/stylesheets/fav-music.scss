@@ -225,10 +225,7 @@ main .container {
   color: #fff;
   transition: 0.2s all;
   @media screen and (max-width: 500px) { // phone
-    position: relative;
     top: 100%;
     left: 81%;
-    width: 3rem;
-    height: 3rem;
   }
 }

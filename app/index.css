@@ -288,11 +288,8 @@ main .container {
 }
 @media screen and (max-width: 500px) {
   .fa-check-circle {
-    position: relative;
     top: 100%;
     left: 81%;
-    width: 3rem;
-    height: 3rem;
   }
 }
 
