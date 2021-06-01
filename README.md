@@ -3,14 +3,14 @@
 
 Live site: <https://its-a-vibe.netlify.app/>
 
-![screenshot of Vibe landing page](./app/img/readme-img.jpg)
-
 * [1.Info](#1-info)<br>
    * [tech stack](#tech-stack)
    * [purpose](#purpose)
 * [2.Usage](#2-usage)<br>
    * [permissions](#permissions)
    * [features](#features)
+
+![screenshot of Vibe landing page](./app/img/readme-img.jpg)
 
 ___
 
