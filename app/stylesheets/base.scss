@@ -16,7 +16,6 @@ html {
   flex-direction: column;
   align-items: center;
   background-color: #fdeded;
-  min-height: 86.5vh;
 }
 
 body {
@@ -36,6 +35,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 86.5vh;
 }
 
 // ----- TYPOGRAPHY -----
