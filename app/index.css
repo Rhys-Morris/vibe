@@ -662,6 +662,11 @@ main .container {
 .next--genres {
   margin-top: 5rem;
 }
+@media screen and (max-width: 500px) {
+  .next--genres {
+    margin: 0 3rem;
+  }
+}
 
 .highlighter {
   background: linear-gradient(to right, #f23637, #fc0b68);
