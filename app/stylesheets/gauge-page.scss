@@ -1,18 +1,18 @@
 .section--gauge {
+  width: 100%;
+  min-height: 86.5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 85vh;
   background-image: linear-gradient(
       145deg,
       rgba(211, 131, 131, 0.9),
       rgba(253, 237, 237, 0.5)
     ),
     url(./img/mood.jpg);
-  background-position: center top;
+  background-position: center;
   background-size: cover;
   color: #eee;
-  width: 100%;
 
   h1 {
     width: 90%;
@@ -23,15 +23,18 @@
     text-align: center;
     padding: 1rem;
     background: rgba(34, 34, 34, 0.5);
+    border-radius: 1rem;
   }
 }
 
 .page-header {
   font-weight: 300;
   font-size: 4rem;
+  text-shadow: 0.5px 0.5px rgba(245, 245, 245, 0.555);
 }
 
 .gauges {
+  // width: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -57,6 +60,10 @@
   border-radius: 1rem;
   h2 {
     margin-bottom: 1rem;
+  }
+  @media screen and (max-width: 500px) { // phone
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 // external fonts
@@ -122,6 +129,9 @@
   right: 0;
   top: 70%;
   width: 96%;
+  @media screen and (max-width: 500px) { // phone
+    width: 80%;
+  }
 }
 #lbl,
 #lbl--2 {
@@ -131,8 +141,14 @@
   font-family: "courier new";
   font-size: 15pt;
   font-weight: bold;
-  padding: 4px 4px 2px 4px;
+  // padding: 4px 4px 2px 4px;
   right: -65px;
   top: 67%;
   padding: 1rem;
+  border-radius: 1rem;
+  @media screen and (max-width: 500px) { // phone
+    right: -14px;
+    padding: 0.7rem;
+    font-size: 13pt;
+  }
 }

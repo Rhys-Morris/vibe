@@ -1,5 +1,5 @@
 /* Set radius for all circles */
-const r = 150;
+const r = window.screen.width >= 550 ? 150 : 100;
 const circles = document.querySelectorAll(".circle");
 const total_circles = circles.length;
 for (let i = 0; i < total_circles; i++) {
@@ -73,7 +73,6 @@ const mask2 = document.querySelector("#mask--2");
 
 function range_change_event() {
   const percent = this.value;
-  console.log(this);
   if (this === slider) {
     const meter_value = semi_cf - (percent * semi_cf) / 100;
     mask.setAttribute("stroke-dasharray", meter_value + "," + cf);

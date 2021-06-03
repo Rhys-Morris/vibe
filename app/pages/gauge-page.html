@@ -9,19 +9,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-    <title>How are you feeling today?</title>
+    <title>What's your vibe?</title>
   </head>
   <body>
     <header class="header">
       <nav class="nav">
-        <div class="nav__logo">Vibe</div>
+        <a href="../index.html" class="nav__logo">Vibe</a>
         <ul class="nav__nav-list">
           <li class="nav__nav-item">
-            <a href="" class="nav__link">About</a>
-            <a href="" class="nav__link">Developers</a>
-            <a href="" class="nav__link cta">Get a Playlist</a>
+            <a href="./about.html" class="nav__link">About</a>
+            <a href="./gauge-page.html" class="nav__link cta">Start over</a>
           </li>
         </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </header>
     <main id="gauge-main">
@@ -133,7 +137,7 @@
     <footer class="footer">
       <p class="footer__copy">&copy; Vibe 2021</p>
     </footer>
-    <script type="module" src="../modules/create-playlist.js"></script>
+    <script src="../index.js" type="module"></script>
     <script src="../modules/fav-music.js" type="module"></script>
     <script src="../modules/svg.js"></script>
     <script src="../modules/gauge.js" type="module"></script>

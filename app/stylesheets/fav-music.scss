@@ -15,9 +15,10 @@
 
 .container {
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
   color: #eee;
 }
+
 #shuffle-button {
   padding-left: 20px;
   padding-right: 20px;
@@ -82,15 +83,23 @@ main .container {
 .container .title {
   margin-top: 5rem;
   text-align: center;
-  line-height: 45px;
+  // line-height: 45px;
   font-weight: 400;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
 }
 .title h2 {
   font-size: 40px;
   font-weight: 400;
+  margin-bottom: 3rem;
+  @media screen and (max-width: 500px) { // phone
+    font-size: 3.5rem;
+  }
 }
 .title span {
-  font-size: 25px;
+  font-size: 2.5rem;
+  @media screen and (max-width: 500px) { // phone
+    font-size: 2.1rem;
+  }
 }
 
 .content .square {
@@ -99,9 +108,14 @@ main .container {
   background-color: #070707;
   cursor: pointer;
   padding: 15px;
+  margin: 0 10px;
+  @media screen and (max-width: 500px) { // phone
+    padding: 1rem;
+  }
 }
 .content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .content .square:hover {
@@ -120,23 +134,35 @@ main .container {
   width: 196px;
   border-radius: 150px;
   cursor: pointer;
+  @media screen and (max-width: 500px) { // phone
+    height: 118px;
+    width: 126px;
+  }
 }
 .inner-cirlce {
-  height: 30px;
-  width: 30px;
+  height: 3rem;
+  width: 3rem;
   background-color: #070707;
   border-radius: 20px;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media screen and (max-width: 500px) { // phone
+    height: 1.5rem;
+    width: 1.5rem;
+  }
 }
 .genre-name {
   position: relative;
   top: 60%;
   left: 3%;
-  font-size: 30px;
+  font-size: 3rem;
   color: #eee;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.568);
+  @media screen and (max-width: 500px) { // phone
+    font-size: 2.3rem;
+  }
   // color: #eef539;
 }
 
@@ -188,14 +214,16 @@ main .container {
 .fa-check-circle {
   z-index: 100;
   position: relative;
-  top: 20%;
-  left: 90%;
+  top: 14%;
+  left: 81%;
   width: 5rem;
   height: 5rem;
   margin: 0;
   padding: 0;
-  color: #1e9600;
-  color: #f2c94c;
   color: #fff;
   transition: 0.2s all;
+  @media screen and (max-width: 500px) { // phone
+    top: 25%;
+    left: 81%;
+  }
 }

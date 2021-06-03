@@ -1,5 +1,3 @@
-import { getRecommendations } from "./api.js";
-
 export function getTrackFeatures(happy, energyLevel) {
   // Map happy and energy values to track features for API call
   happy = Number(happy);

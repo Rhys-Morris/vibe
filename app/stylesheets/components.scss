@@ -15,7 +15,7 @@
 }
 
 .next {
-  margin-top: 3rem;
+  margin: 3rem 0;
   align-self: flex-end;
   text-transform: uppercase;
   text-decoration: none;
@@ -34,10 +34,14 @@
 
 .next--genres {
   margin-top: 5rem;
+  @media screen and (max-width: 500px) { // phone
+    margin: 0 3rem;
+  }
 }
 
 .highlighter {
   background: linear-gradient(to right, #f23637, #fc0b68);
+  text-shadow: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
